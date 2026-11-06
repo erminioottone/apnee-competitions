@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apnée Compétitions France — FFESSM &amp; AIDA</title>
+<style>
+  :root {
+    --bg: #f4f7f9;
+    --card: #ffffff;
+    --ink: #10222b;
+    --muted: #5b707d;
+    --line: #dbe5ea;
+    --accent: #0b6e6e;
+    --accent-soft: #e0f0ef;
+    --warn: #b54708;
+    --warn-soft: #fdf1e3;
+    --type-cdf: #1d4ed8;
+    --type-chfr: #7c3aed;
+    --type-chreg: #0b6e6e;
+    --type-sel: #475569;
+    --type-open: #a16207;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.45;
+  }
+  header {
+    background: var(--accent);
+    color: #fff;
+    padding: 18px 20px;
+  }
+  header h1 { margin: 0; font-size: 1.25rem; letter-spacing: .2px; }
+  header p { margin: 4px 0 0; font-size: .85rem; opacity: .85; }
+  main { max-width: 920px; margin: 0 auto; padding: 16px 16px 48px; }
+  .panel {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+  }
+  .controls { display: grid; gap: 12px; }
+  @media (min-width: 700px) {
+    .controls { grid-template-columns: 1.2fr 1fr auto; align-items: end; }
+  }
+  label { display: block; font-size: .8rem; color: var(--muted); margin-bottom: 4px; }
+  select, input[type="range"] { width: 100%; }
+  select {
+    padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px;
+    background: #fff; font-size: .95rem;
+  }
+  .radius-row { display: flex; align-items: center; gap: 10px; }
+  #radiusValue { min-width: 64px; font-weight: 600; color: var(--accent); }
+  button.geo {
+    padding: 8px 12px; border: 1px solid var(--accent); border-radius: 8px;
+    background: var(--accent-soft); color: var(--accent); cursor: pointer;
+    font-size: .85rem; white-space: nowrap;
+  }
+  button.geo:hover { background: #cfe8e7; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    padding: 5px 12px; border-radius: 999px; border: 1px solid var(--line);
+    background: #fff; cursor: pointer; font-size: .8rem; color: var(--muted);
+  }
+  .chip.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .banner {
+    background: var(--warn-soft); color: var(--warn);
+    border: 1px solid #f3d9b1; border-radius: 8px;
+    padding: 10px 12px; font-size: .85rem; margin-bottom: 12px;
+  }
+  .banner.info { background: var(--accent-soft); color: var(--accent); border-color: #bfe0de; }
+  .meta-line { font-size: .8rem; color: var(--muted); margin: 2px 0 14px; }
+  h2.section {
+    font-size: 1rem; margin: 22px 0 10px; color: var(--muted);
+    text-transform: uppercase; letter-spacing: .6px;
+  }
+  .card {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 10px; padding: 14px 16px; margin-bottom: 10px;
+  }
+  .card.past { opacity: .55; }
+  .card-top { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+  .card h3 { margin: 0; font-size: 1rem; }
+  .distance { font-weight: 700; color: var(--accent); white-space: nowrap; }
+  .badges { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+  .badge {
+    font-size: .72rem; padding: 2px 8px; border-radius: 999px;
+    border: 1px solid var(--line); color: var(--muted); background: #fff;
+  }
+  .badge.fed-FFESSM { color: var(--type-cdf); border-color: #c7d7f5; }
+  .badge.fed-AIDA { color: var(--warn); border-color: #f3d9b1; }
+  .badge.t-manche_cdf { color: var(--type-cdf); border-color: #c7d7f5; }
+  .badge.t-championnat_france { color: var(--type-chfr); border-color: #e2d5f7; }
+  .badge.t-championnat_regional { color: var(--type-chreg); border-color: #bfe0de; }
+  .badge.t-selective { color: var(--type-sel); border-color: #d3dbe3; }
+  .badge.t-open { color: var(--type-open); border-color: #eedeb8; }
+  .when { font-size: .95rem; margin: 6px 0; }
+  .where { font-size: .85rem; color: var(--muted); margin-bottom: 8px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+  .actions a {
+    font-size: .82rem; text-decoration: none; color: var(--accent);
+    border-bottom: 1px dotted var(--accent); padding-bottom: 1px;
+  }
+  .reg-note { font-size: .78rem; color: var(--muted); margin-top: 8px; }
+  .note { font-size: .78rem; color: var(--warn); margin-top: 6px; }
+  .source-note { font-size: .72rem; color: var(--muted); margin-top: 8px; }
+  .count-line { font-size: .85rem; color: var(--muted); margin: 4px 0 12px; }
+  footer {
+    border-top: 1px solid var(--line); margin-top: 28px; padding-top: 14px;
+    font-size: .78rem; color: var(--muted);
+  }
+  footer ul { padding-left: 18px; margin: 8px 0; }
+  footer li { margin-bottom: 3px; }
+  .empty { color: var(--muted); font-size: .9rem; padding: 8px 2px; }
+  .skel { color: var(--muted); font-size: .9rem; padding: 24px 4px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Apnée Compétitions France</h1>
+  <p>Compétitions FFESSM et AIDA autour de chez vous — agrégateur non officiel, sources officielles citées pour chaque événement.</p>
+</header>
+<main>
+  <div class="panel controls">
+    <div>
+      <label for="homeSelect">Point de départ</label>
+      <div class="radius-row" style="gap:8px">
+        <select id="homeSelect"></select>
+        <button class="geo" id="geoBtn" type="button">Ma position</button>
+      </div>
+    </div>
+    <div>
+      <label for="radius">Rayon</label>
+      <div class="radius-row">
+        <input type="range" id="radius" min="10" max="500" step="10" value="100">
+        <span id="radiusValue">100 km</span>
+      </div>
+    </div>
+    <div>
+      <label>&nbsp;</label>
+      <label style="margin:0">
+        <input type="checkbox" id="showPast"> Inclure les compétitions passées
+      </label>
+    </div>
+  </div>
+
+  <div class="panel">
+    <label>Fédération</label>
+    <div class="chips" id="fedChips">
+      <button class="chip on" data-fed="all" type="button">Toutes</button>
+      <button class="chip" data-fed="FFESSM" type="button">FFESSM</button>
+      <button class="chip" data-fed="AIDA" type="button">AIDA</button>
+    </div>
+    <div style="height:10px"></div>
+    <label>Type</label>
+    <div class="chips" id="typeChips">
+      <button class="chip on" data-type="all" type="button">Tous</button>
+      <button class="chip" data-type="manche_cdf" type="button">Coupe de France</button>
+      <button class="chip" data-type="championnat_france" type="button">Championnat de France</button>
+      <button class="chip" data-type="championnat_regional" type="button">Championnat régional</button>
+      <button class="chip" data-type="selective" type="button">Sélective</button>
+      <button class="chip" data-type="open" type="button">Open</button>
+    </div>
+  </div>
+
+  <div id="statusSlot"></div>
+  <div class="meta-line" id="metaLine"></div>
+  <div id="results"></div>
+
+  <footer id="sourcesFooter">
+    <p id="disclaimer"></p>
+    <p style="margin:8px 0 2px"><strong>Sources (vérifiées à la date indiquée dans chaque fiche) :</strong></p>
+    <ul id="sourceList"></ul>
+    <p id="privacy"></p>
+  </footer>
+</main>
+
+<script>
+window.__PRESET_DATA__ = {
+  "dataset_version": "2026-11-06.1",
+  "as_of": "2026-11-06",
+  "scope": "France, saison 2026-2027, compétitions d'apnée FFESSM (fédéral et régional documenté) et AIDA France (aucune compétition AIDA publiée au format calendrier à cette date).",
+  "disclaimer": "Agrégateur non officiel. Données assemblées à la main depuis les sources ci-dessous. Toujours confirmer dates, lieux et modalités d'inscription sur les pages officielles. Les liens d'inscription sont publiés par les organisateurs, généralement quelques semaines avant l'événement.",
+  "sources": [
+    {
+      "id": "ffessm-national",
+      "name": "FFESSM — Commission Nationale Apnée, calendrier des compétitions",
+      "url": "https://apnee.ffessm.fr/calendrier-saison-sportive",
+      "type": "fédération (officiel)",
+      "monitor": true
+    },
+    {
+      "id": "cna-gestion",
+      "name": "CNA — Gestion des compétitions (protocoles officiels)",
+      "url": "https://g-competitions-cna.fr/",
+      "type": "fédération (officiel)",
+      "monitor": true
+    },
+    {
+      "id": "cr-idf",
+      "name": "FFESSM Île-de-France — Commission Apnée (calendrier régional)",
+      "url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
+      "type": "comité régional (officiel)",
+      "monitor": true
+    },
+    {
+      "id": "cr-centre",
+      "name": "Comité Centre FFESSM — calendrier apnée 2026-2027",
+      "url": "https://centreffessm.fr/actualites/apnee/apnee-calendrier-des-competitions-2026-2027/",
+      "type": "comité régional (officiel)",
+      "monitor": true
+    },
+    {
+      "id": "cd95",
+      "name": "FFESSM Codep 95 — dates apnée 2026-2027",
+      "url": "https://www.ffessm95.fr/2026/09/28/apnee-2026-2027-formations-competitions/",
+      "type": "comité départemental (officiel)",
+      "monitor": true
+    },
+    {
+      "id": "csa-agen",
+      "name": "Club Subaquatique Agenais — page compétition (reprend les manches de Coupe de France)",
+      "url": "https://www.agenplongee.com/pages/les-commissions/apnee/competition.html",
+      "type": "site de club (source secondaire)",
+      "monitor": true
+    },
+    {
+      "id": "aida-france",
+      "name": "AIDA France (annonces compétitions)",
+      "url": "https://aidafrance.fr/",
+      "type": "fédération (officiel)",
+      "monitor": true
+    }
+  ],
+  "events": [
+    {
+      "id": "cdm-epinal-2026",
+      "federation": "FFESSM",
+      "type": "manche_cdf",
+      "name": "Manche de Coupe de France",
+      "start": "2026-11-28",
+      "end": "2026-11-29",
+      "city": "Épinal",
+      "department": "88",
+      "lat": 48.1725,
+      "lon": 6.4497,
+      "organizer": "Club organisateur local (à confirmer sur le protocole)",
+      "info_url": "https://apnee.ffessm.fr/calendrier-saison-sportive",
+      "source_id": "csa-agen",
+      "source_url": "https://www.agenplongee.com/pages/les-commissions/apnee/competition.html",
+      "verified_on": "2026-11-06",
+      "notes": "Source secondaire (page club reprenant le calendrier fédéral). Confirmer sur le protocole officiel CNA."
+    },
+    {
+      "id": "cdm-dunkerque-2026",
+      "federation": "FFESSM",
+      "type": "manche_cdf",
+      "name": "Manche de Coupe de France",
+      "start": "2026-12-05",
+      "end": "2026-12-06",
+      "city": "Dunkerque",
+      "department": "59",
+      "lat": 51.0345,
+      "lon": 2.3769,
+      "organizer": "Club organisateur local (à confirmer sur le protocole)",
+      "info_url": "https://apnee.ffessm.fr/calendrier-saison-sportive",
+      "source_id": "csa-agen",
+      "source_url": "https://www.agenplongee.com/pages/les-commissions/apnee/competition.html",
+      "verified_on": "2026-11-06",
+      "notes": "Source secondaire (page club). Confirmer sur le protocole officiel CNA."
+    },
+    {
+      "id": "selective-kremlin-bicetre-2026",
+      "federation": "FFESSM",
+      "type": "selective",
+      "name": "Compétition d'apnée du Kremlin-Bicêtre",
+      "start": "2026-11-14",
+      "end": null,
+      "city": "Le Kremlin-Bicêtre",
+      "department": "94",
+      "lat": 48.8116,
+      "lon": 2.3599,
+      "organizer": "Commission Apnée Île-de-France / club local",
+      "info_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
+      "source_id": "cr-idf",
+      "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
+      "verified_on": "2026-11-06",
+      "notes": ""
+    },
+    {
+      "id": "selective-clamart-2026",
+      "federation": "FFESSM",
+      "type": "selective",
+      "name": "Apnées franciliennes de Clamart",
+      "start": "2026-12-13",
+      "end": null,
+      "city": "Clamart",
+      "department": "92",
+      "lat": 48.8017,
+      "lon": 2.2662,
+      "organizer": "Commission Apnée Île-de-France / club local",
+      "info_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
+      "source_id": "cr-idf",
+      "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
+      "verified_on": "2026-11-06",
+      "notes": ""
+    },
+    {
+      "id": "cdm-massy-2027",
+      "federation": "FFESSM",
+      "type": "manche_cdf",
+      "name": "Compétition d'apnée de Massy — Manche de Coupe de France",
+      "start": "2027-01-23",
+      "end": "2027-01-24",
+      "city": "Massy",
+      "department": "91",
+      "lat": 48.7264,
+      "lon": 2.2703,
+      "organizer": "Hippocampe Club Entente Sportive Massy (à confirmer)",
+      "info_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
+      "source_id": "cr-idf",
+      "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
+      "verified_on": "2026-11-06",
+      "notes": "Date confirmée par deux sources (comité régional IdF et page club CSA Agen). Le Codep 95 signale des dates à vérifier."
+    },
+    {
+      "id": "selective-chesnay-2027",
+      "federation": "FFESSM",
+      "type": "selective",
+      "name": "Compétition d'apnée du Chesnay-Rocquencourt",
+      "start": "2027-01-10",
+      "end": null,
+      "city": "Le Chesnay-Rocquencourt",
+      "department": "78",
+      "lat": 48.8242,
+      "lon": 2.1256,
+      "organizer": "Commission Apnée Île-de-France / club local",
+      "info_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
+      "source_id": "cr-idf",
+      "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
+      "verified_on": "2026-11-06",
+      "notes": ""
+    },
+    {
+      "id": "selective-fontenay-2027",
+      "federation": "FFESSM",
+      "type": "selective",
+      "name": "Compétition d'apnée de Fontenay-sous-Bois",
+      "start": "2027-01-17",
+      "end": null,
+      "city": "Fontenay-sous-Bois",
+      "department": "94",
+      "lat": 48.8489,
+      "lon": 2.477,
+      "organizer": "Commission Apnée Île-de-France / club local",
+      "info_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
+      "source_id": "cr-idf",
+      "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
+      "verified_on": "2026-11-06",
+      "notes": ""
+    },
+    {
+      "id": "cdm-agen-2027",
+      "federation": "FFESSM",
+      "type": "manche_cdf",
+      "name": "Manche de Coupe de France",
+      "start": "2027-01-30",
+      "end": "2027-01-31",
+      "city": "Agen",
+      "department": "47",
+      "lat": 44.203,
+      "lon": 0.6215,
+      "organizer": "Club Subaquatique Agenais (à confirmer)",
+      "info_url": "https://www.agenplongee.com/pages/les-commissions/apnee/competition.html",
+      "source_id": "csa-agen",
+      "source_url": "https://www.agenplongee.com/pages/les-commissions/apnee/competition.html",
+      "verified_on": "2026-11-06",
+      "notes": "Club historiquement organisateur de la manche d'Agen."
+    },
+    {
+      "id": "selective-fresnes-2027",
+      "federation": "FFESSM",
+      "type": "selective",
+      "name": "Compétition de Fresnes",
+      "start": "2027-02-07",
+      "end": null,
+      "city": "Fresnes",
+      "department": "94",
+      "lat": 48.7572,
+      "lon": 2.3297,
+      "organizer": "Commission Apnée Île-de-France / club local",
+      "info_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
+      "source_id": "cr-idf",
+      "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
+      "verified_on": "2026-11-06",
+      "notes": ""
+    },
+    {
+      "id": "selective-mennecy-2027",
+      "federation": "FFESSM",
+      "type": "selective",
+      "name": "Compétition d'apnée de Mennecy",
+      "start": "2027-02-28",
+      "end": null,
+      "city": "Mennecy",
+      "department": "91",
+      "lat": 48.5628,
+      "lon": 2.4345,
+      "organizer": "Commission Apnée Île-de-France / club local",
+      "info_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
+      "source_id": "cr-idf",
+      "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
+      "verified_on": "2026-11-06",
+      "notes": ""
+    },
+    {
+      "id": "selective-mantes-2027",
+      "federation": "FFESSM",
+      "type": "selective",
+      "name": "Compétition d'apnée de Mantes",
+      "start": "2027-03-06",
+      "end": null,
+      "city": "Mantes-la-Jolie",
+      "department": "78",
+      "lat": 48.9895,
+      "lon": 1.6904,
+      "organizer": "Commission Apnée Île-de-France / club local",
+      "info_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
+      "source_id": "cr-idf",
+      "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
+      "verified_on": "2026-11-06",
+      "notes": ""
+    },
+    {
+      "id": "cdm-besancon-2027",
+      "federation": "FFESSM",
+      "type": "manche_cdf",
+      "name": "Manche de Coupe de France",
+      "start": "2027-03-13",
+      "end": "2027-03-14",
+      "city": "Besançon",
+      "department": "25",
+      "lat": 47.2428,
+      "lon": 6.0243,
+      "organizer": "Club organisateur local (à confirmer sur le protocole)",
+      "info_url": "https://apnee.ffessm.fr/calendrier-saison-sportive",
+      "source_id": "csa-agen",
+      "source_url": "https://www.agenplongee.com/pages/les-commissions/apnee/competition.html",
+      "verified_on": "2026-11-06",
+      "notes": "Source secondaire (page club). Confirmer sur le protocole officiel CNA."
+    },
+    {
+      "id": "selective-melun-2027",
+      "federation": "FFESSM",
+      "type": "selective",
+      "name": "Melunaise d'apnée — Trophée Alain Bertoncello",
+      "start": "2027-03-14",
+      "end": null,
+      "city": "Melun",
+      "department": "77",
+      "lat": 48.5405,
+      "lon": 2.66,
+      "organizer": "Union Sportive de Melun (à confirmer)",
+      "info_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
+      "source_id": "cr-idf",
+      "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
+      "verified_on": "2026-11-06",
+      "notes": ""
+    },
+    {
+      "id": "championnat-regional-idf-2027",
+      "federation": "FFESSM",
+      "type": "championnat_regional",
+      "name": "La Royale du Dôme — Championnat régional d'apnée Île-de-France",
+      "start": "2027-03-21",
+      "end": null,
+      "city": "Saint-Germain-en-Laye",
+      "department": "78",
+      "lat": 48.8984,
+      "lon": 2.0938,
+      "organizer": "Commission Apnée Île-de-France",
+      "info_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
+      "source_id": "cr-idf",
+      "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
+      "verified_on": "2026-11-06",
+      "notes": ""
+    },
+    {
+      "id": "open-challenge91-2027",
+      "federation": "FFESSM",
+      "type": "open",
+      "name": "Open — Challenge 91",
+      "start": "2027-04-25",
+      "end": null,
+      "city": "Corbeil-Essonnes",
+      "department": "91",
+      "lat": 48.6136,
+      "lon": 2.4823,
+      "organizer": "Commission Apnée Île-de-France / club local",
+      "info_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
+      "source_id": "cr-idf",
+      "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
+      "verified_on": "2026-11-06",
+      "notes": ""
+    },
+    {
+      "id": "tropee-caneson-2027",
+      "federation": "FFESSM",
+      "type": "non_classe",
+      "name": "Trophée Canneson",
+      "start": "2027-04-25",
+      "end": null,
+      "city": null,
+      "department": "78",
+      "lat": null,
+      "lon": null,
+      "organizer": "Club organisateur (Yvelines, à confirmer)",
+      "info_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
+      "source_id": "cr-idf",
+      "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
+      "verified_on": "2026-11-06",
+      "notes": "Lieu non précisé par la source (département 78 uniquement). Type de compétition à confirmer."
+    },
+    {
+      "id": "championnat-france-2027",
+      "federation": "FFESSM",
+      "type": "championnat_france",
+      "name": "Championnat de France d'apnée piscine",
+      "start": null,
+      "end": null,
+      "city": null,
+      "department": null,
+      "lat": null,
+      "lon": null,
+      "organizer": "Commission Nationale Apnée FFESSM",
+      "info_url": "https://apnee.ffessm.fr/calendrier-saison-sportive",
+      "source_id": "csa-agen",
+      "source_url": "https://www.agenplongee.com/pages/les-commissions/apnee/competition.html",
+      "verified_on": "2026-11-06",
+      "notes": "Mai 2027, dates et ville non publiées à ce jour. À vérifier sur apnee.ffessm.fr."
+    },
+    {
+      "id": "tolosapnea-2027",
+      "federation": "FFESSM",
+      "type": "championnat_regional",
+      "name": "TOLOSAPNEA — Championnat régional d'apnée Occitanie",
+      "start": "2027-04-03",
+      "end": "2027-04-04",
+      "city": "Toulouse",
+      "department": "31",
+      "lat": 43.6045,
+      "lon": 1.4442,
+      "organizer": "Toulouse Métropole Palmes et Immersion Libre, avec la FFESSM",
+      "info_url": "https://apnee.ffessm.fr/calendrier-saison-sportive",
+      "source_id": "csa-agen",
+      "source_url": "https://www.agenplongee.com/pages/les-commissions/apnee/competition.html",
+      "verified_on": "2026-11-06",
+      "notes": "Source : communication interne club (courriel, 19/10/2026). À confirmer sur les canaux officiels FFESSM Occitanie."
+    },
+    {
+      "id": "aura-apnea-contest-2026",
+      "federation": "FFESSM",
+      "type": "non_classe",
+      "name": "AURA APNEA CONTEST 2026",
+      "start": "2026-11-01",
+      "end": null,
+      "city": "Saint-Bel",
+      "department": "69",
+      "lat": 45.8367,
+      "lon": 4.6039,
+      "organizer": "Comité régional AURA",
+      "info_url": "https://g-competitions-cna.fr/",
+      "source_id": "cna-gestion",
+      "source_url": "https://g-competitions-cna.fr/",
+      "verified_on": "2026-11-06",
+      "notes": "Passé. Niveau de compétition non précisé par la source."
+    },
+    {
+      "id": "open-beauvais-2026",
+      "federation": "FFESSM",
+      "type": "open",
+      "name": "Open d'Apnée de Beauvais",
+      "start": "2026-10-11",
+      "end": null,
+      "city": "Beauvais",
+      "department": "60",
+      "lat": 49.4303,
+      "lon": 2.0833,
+      "organizer": "Club local (à confirmer)",
+      "info_url": "https://g-competitions-cna.fr/",
+      "source_id": "cna-gestion",
+      "source_url": "https://g-competitions-cna.fr/",
+      "verified_on": "2026-11-06",
+      "notes": "Passé."
+    }
+  ]
+};
+</script>
+<script>
+
+"use strict";
+
+const PRESET_CITIES = [
+  { name: "Toulouse", lat: 43.6045, lon: 1.4442 },
+  { name: "Castanet-Tolosan", lat: 43.5167, lon: 1.5181 },
+  { name: "Agen", lat: 44.203, lon: 0.6215 },
+  { name: "Montpellier", lat: 43.6109, lon: 3.8763 },
+  { name: "Bordeaux", lat: 44.8378, lon: -0.5792 },
+  { name: "Marseille", lat: 43.2964, lon: 5.3698 },
+  { name: "Lyon", lat: 45.764, lon: 4.8357 },
+  { name: "Paris", lat: 48.8566, lon: 2.3522 },
+  { name: "Massy", lat: 48.7264, lon: 2.2703 },
+  { name: "Besançon", lat: 47.2428, lon: 6.0243 },
+  { name: "Épinal", lat: 48.1725, lon: 6.4497 },
+  { name: "Dunkerque", lat: 51.0345, lon: 2.3769 },
+  { name: "Brest", lat: 48.3904, lon: -4.4861 }
+];
+
+const TYPE_LABELS = {
+  manche_cdf: "Manche de Coupe de France",
+  championnat_france: "Championnat de France",
+  championnat_regional: "Championnat régional",
+  selective: "Officielle sélective",
+  open: "Open",
+  non_classe: "Type à confirmer"
+};
+
+const state = {
+  home: null,
+  radius: 100,
+  fed: "all",
+  type: "all",
+  showPast: false,
+  data: null
+};
+
+function haversineKm(lat1, lon1, lat2, lon2) {
+  const R = 6371;
+  const toRad = d => d * Math.PI / 180;
+  const dLat = toRad(lat2 - lat1);
+  const dLon = toRad(lon2 - lon1);
+  const a = Math.sin(dLat / 2) ** 2 +
+            Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
+            Math.sin(dLon / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(a));
+}
+
+function fmtDate(iso) {
+  if (!iso) return "dates à confirmer";
+  const d = new Date(iso + "T12:00:00");
+  const s = d.toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" });
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
+function fmtRange(ev) {
+  if (!ev.start && !ev.end) return "Dates à confirmer";
+  if (!ev.end || ev.end === ev.start) return fmtDate(ev.start);
+  return fmtDate(ev.start) + " – " + fmtDate(ev.end);
+}
+
+function isPast(ev) {
+  const ref = ev.end || ev.start;
+  if (!ref) return false;
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  return new Date(ref + "T23:59:59") < today;
+}
+
+function esc(s) {
+  return String(s).replace(/[&<>"']/g, c => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[c]));
+}
+
+function eventCard(ev, distance) {
+  const past = isPast(ev);
+  const distHtml = (distance !== null)
+    ? `<span class="distance">${Math.round(distance)} km</span>`
+    : `<span class="distance" style="color:var(--muted)">lieu non localisé</span>`;
+  const where = ev.city
+    ? `${esc(ev.city)}${ev.department ? " (" + esc(ev.department) + ")" : ""}`
+    : (ev.department ? `Département ${esc(ev.department)} — lieu à confirmer` : "Lieu à confirmer");
+  const noteHtml = ev.notes ? `<div class="note">${esc(ev.notes)}</div>` : "";
+  const srcName = (state.data.sources.find(s => s.id === ev.source_id) || {}).name || ev.source_id;
+  return `
+  <div class="card${past ? " past" : ""}">
+    <div class="card-top">
+      <h3>${esc(ev.name)}</h3>
+      ${distHtml}
+    </div>
+    <div class="badges">
+      <span class="badge fed-${esc(ev.federation)}">${esc(ev.federation)}</span>
+      <span class="badge t-${esc(ev.type)}">${esc(TYPE_LABELS[ev.type] || ev.type)}</span>
+      ${past ? '<span class="badge">passée</span>' : ""}
+    </div>
+    <div class="when">${fmtRange(ev)}</div>
+    <div class="where">${where}</div>
+    <div class="actions">
+      <a href="${esc(ev.info_url)}" target="_blank" rel="noopener">Page organisateur / inscription</a>
+      <a href="${esc(ev.source_url)}" target="_blank" rel="noopener">Source</a>
+    </div>
+    <div class="reg-note">Inscription : les liens d'inscription sont publiés par les organisateurs, généralement quelques semaines avant l'événement — vérifier la page organisateur.</div>
+    ${noteHtml}
+    <div class="source-note">${esc(srcName)} — vérifié le ${esc(ev.verified_on)}</div>
+  </div>`;
+}
+
+function render() {
+  const results = document.getElementById("results");
+  const meta = document.getElementById("metaLine");
+  if (!state.data) { results.innerHTML = '<div class="skel">Chargement…</div>'; return; }
+
+  const events = state.data.events.filter(ev => {
+    if (state.fed !== "all" && ev.federation !== state.fed) return false;
+    if (state.type !== "all" && ev.type !== state.type) return false;
+    if (!state.showPast && isPast(ev)) return false;
+    return true;
+  });
+
+  const located = [];
+  const unlocated = [];
+  for (const ev of events) {
+    if (ev.lat !== null && ev.lon !== null && state.home) {
+      const d = haversineKm(state.home.lat, state.home.lon, ev.lat, ev.lon);
+      if (d <= state.radius) located.push({ ev, d });
+    } else {
+      unlocated.push({ ev, d: null });
+    }
+  }
+  located.sort((a, b) => {
+    const da = a.ev.start || "9999", db = b.ev.start || "9999";
+    return da < db ? -1 : da > db ? 1 : 0;
+  });
+  unlocated.sort((a, b) => {
+    const da = a.ev.start || "9999", db = b.ev.start || "9999";
+    return da < db ? -1 : da > db ? 1 : 0;
+  });
+
+  meta.textContent =
+    `${located.length} compétition(s) dans un rayon de ${state.radius} km` +
+    (state.home ? ` autour de ${state.home.label}` : "") +
+    (unlocated.length ? ` — ${unlocated.length} sans lieu confirmé (non filtrables par distance)` : "") +
+    ` — données assemblées le ${state.data.as_of}`;
+
+  let html = "";
+  if (located.length) {
+    html += `<h2 class="section">À portée</h2>` +
+      located.map(x => eventCard(x.ev, x.d)).join("");
+  }
+  if (unlocated.length) {
+    html += `<h2 class="section">Lieu ou dates à confirmer</h2>` +
+      unlocated.map(x => eventCard(x.ev, null)).join("");
+  }
+  if (!located.length && !unlocated.length) {
+    html = `<div class="empty">Aucune compétition ne correspond à ces filtres.</div>`;
+  }
+  results.innerHTML = html;
+}
+
+function setHome(home) {
+  state.home = home;
+  try { localStorage.setItem("apnee-home", JSON.stringify(home)); } catch (e) {}
+  render();
+}
+
+async function loadData() {
+  const statusSlot = document.getElementById("statusSlot");
+  try {
+    let data;
+    if (typeof window.__PRESET_DATA__ !== "undefined") {
+      data = window.__PRESET_DATA__;
+    } else {
+      const res = await fetch("events.json");
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      data = await res.json();
+    }
+    state.data = data;
+
+    document.getElementById("disclaimer").textContent = data.disclaimer;
+    document.getElementById("privacy").textContent =
+      "Aucune donnée personnelle n'est collectée : votre position est stockée uniquement dans votre navigateur (localStorage). " +
+      "Coordonnées des villes approximatives au niveau communal.";
+    const ul = document.getElementById("sourceList");
+    ul.innerHTML = data.sources.map(s =>
+      `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a> — ${esc(s.type)}</li>`
+    ).join("");
+
+    if (typeof window.__PRESET_DATA__ === "undefined") {
+      try {
+        const mres = await fetch("sources-status.json");
+        if (mres.ok) {
+          const monitoring = await mres.json();
+          if (monitoring && monitoring.last_run) {
+            const changed = Object.entries(monitoring.sources || {})
+              .filter(([id, st]) => st.changed)
+              .map(([id]) => (data.sources.find(s => s.id === id) || { name: id }).name);
+            const d = new Date(monitoring.last_run);
+            const when = d.toLocaleDateString("fr-FR");
+            if (changed.length) {
+              statusSlot.innerHTML =
+                `<div class="banner">Sources officielles modifiées depuis le dernier passage (${esc(changed.join(", "))}) — vérifié le ${when}. Les données affichées peuvent être périmées : contrôle manuel recommandé.</div>`;
+            } else {
+              statusSlot.innerHTML =
+                `<div class="banner info">Sources officielles vérifiées automatiquement le ${when} — aucune modification détectée depuis la dernière vérification.</div>`;
+            }
+          }
+        }
+      } catch (e) { /* monitoring indisponible (ex. premier lancement) */ }
+    }
+    render();
+  } catch (e) {
+    document.getElementById("results").innerHTML =
+      `<div class="banner">Impossible de charger les données (${esc(e.message)}). Ouvrez le site déployé (GitHub Pages) ou servez le dossier localement : events.json doit être accessible.</div>`;
+  }
+}
+
+function initControls() {
+  const homeSelect = document.getElementById("homeSelect");
+  PRESET_CITIES.forEach((c, i) => {
+    const opt = document.createElement("option");
+    opt.value = i;
+    opt.textContent = c.name;
+    homeSelect.appendChild(opt);
+  });
+  let saved = null;
+  try { saved = JSON.parse(localStorage.getItem("apnee-home")); } catch (e) {}
+  if (saved && typeof saved.lat === "number") {
+    state.home = saved;
+    const match = PRESET_CITIES.findIndex(c => c.name === saved.label);
+    if (match >= 0) homeSelect.value = match;
+  } else {
+    state.home = { label: "Toulouse", lat: 43.6045, lon: 1.4442 };
+  }
+  homeSelect.addEventListener("change", () => {
+    const c = PRESET_CITIES[homeSelect.value];
+    setHome({ label: c.name, lat: c.lat, lon: c.lon });
+  });
+
+  document.getElementById("geoBtn").addEventListener("click", () => {
+    if (!navigator.geolocation) return;
+    navigator.geolocation.getCurrentPosition(pos => {
+      setHome({
+        label: "ma position",
+        lat: pos.coords.latitude,
+        lon: pos.coords.longitude
+      });
+    }, () => {
+      document.getElementById("statusSlot").innerHTML =
+        '<div class="banner">Géolocalisation refusée ou indisponible — sélectionnez une ville.</div>';
+    });
+  });
+
+  const radius = document.getElementById("radius");
+  radius.addEventListener("input", () => {
+    state.radius = Number(radius.value);
+    document.getElementById("radiusValue").textContent = state.radius + " km";
+    render();
+  });
+
+  document.getElementById("showPast").addEventListener("change", e => {
+    state.showPast = e.target.checked;
+    render();
+  });
+
+  function bindChips(containerId, key) {
+    const el = document.getElementById(containerId);
+    el.addEventListener("click", e => {
+      const btn = e.target.closest(".chip");
+      if (!btn) return;
+      el.querySelectorAll(".chip").forEach(c => c.classList.remove("on"));
+      btn.classList.add("on");
+      state[key] = btn.dataset.fed || btn.dataset.type;
+      render();
+    });
+  }
+  bindChips("fedChips", "fed");
+  bindChips("typeChips", "type");
+}
+
+initControls();
+loadData();
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" nonce="6UilVat87elE8d2n16ZSig==" data-cf-beacon='{"version":"2024.11.0","token":"36b4216ae2dc4d5488c249161e71fe1e","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
