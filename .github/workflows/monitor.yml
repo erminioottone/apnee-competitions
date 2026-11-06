@@ -1,0 +1,31 @@
+name: Source monitoring
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check monitored sources
+        run: node scripts/check-sources.mjs
+      - name: Commit status if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sources-status.json
+          if git diff --cached --quiet; then
+            echo "No source changes detected."
+          else
+            git commit -m "chore: update source monitoring status"
+            git push
+          fi
