@@ -1,0 +1,54 @@
+{
+  "last_run": "2026-11-07T17:28:06.060Z",
+  "sources": {
+    "ffessm-declarations": {
+      "url": "https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/gviz/tq?tqx=out:csv",
+      "checked_at": "2026-11-07T17:27:59.959Z",
+      "status": 200,
+      "hash": "10966bf0dbf3071a52fcd7d75d73d3122a49de7799d7afc99886760df2969ba2",
+      "changed": null
+    },
+    "ffessm-national": {
+      "url": "https://apnee.ffessm.fr/calendrier-saison-sportive",
+      "checked_at": "2026-11-07T17:28:00.392Z",
+      "status": 200,
+      "hash": "e0f4ad7b5df770f3f01104490cac3d34ded6ff0ca71f6be6e4bc5870a166aea8",
+      "changed": null
+    },
+    "cna-gestion": {
+      "url": "https://g-competitions-cna.fr/",
+      "checked_at": "2026-11-07T17:28:00.755Z",
+      "status": 200,
+      "hash": "497d931a7c5538de389c4a09ca380df23927fe754f8f6689794abe2a9732ba8b",
+      "changed": null
+    },
+    "cr-idf": {
+      "url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
+      "checked_at": "2026-11-07T17:28:01.526Z",
+      "status": 200,
+      "hash": "0c62f9784d8b6b3929faeae959b1227841bb72da6a6deb5e870fb686e66695c5",
+      "changed": null
+    },
+    "cr-centre": {
+      "url": "https://centreffessm.fr/actualites/apnee/apnee-calendrier-des-competitions-2026-2027/",
+      "checked_at": "2026-11-07T17:28:04.060Z",
+      "status": 200,
+      "hash": "bd07d721f28506b0db580bf79aa51d52530044bb3e32baf310c7c40fdb67483a",
+      "changed": null
+    },
+    "cd95": {
+      "url": "https://www.ffessm95.fr/2026/09/28/apnee-2026-2027-formations-competitions/",
+      "checked_at": "2026-11-07T17:28:05.642Z",
+      "status": 200,
+      "hash": "358b0d7316d37625c97cc39295d7b64a6df43f90cc0ed9d5b180d6831e70c992",
+      "changed": null
+    },
+    "aida-france": {
+      "url": "https://aidafrance.fr/actualites/",
+      "checked_at": "2026-11-07T17:28:05.749Z",
+      "status": 200,
+      "hash": "688c88e9abb1f8ee4726179be9832626b54c5733f8e857c926638bf8c4de8c46",
+      "changed": null
+    }
+  }
+}

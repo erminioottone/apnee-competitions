@@ -18,6 +18,9 @@
     --type-cdf: #1d4ed8;
     --type-chfr: #7c3aed;
     --type-chreg: #0b6e6e;
+    --type-chinter: #c2410c;
+    --type-chdep: #4d7c0f;
+    --type-monde: #be123c;
     --type-sel: #475569;
     --type-open: #a16207;
   }
@@ -97,6 +100,9 @@
   .badge.t-manche_cdf { color: var(--type-cdf); border-color: #c7d7f5; }
   .badge.t-championnat_france { color: var(--type-chfr); border-color: #e2d5f7; }
   .badge.t-championnat_regional { color: var(--type-chreg); border-color: #bfe0de; }
+  .badge.t-championnat_interregional { color: var(--type-chinter); border-color: #f6d9c4; }
+  .badge.t-championnat_departemental { color: var(--type-chdep); border-color: #e3ecc9; }
+  .badge.t-championnat_monde { color: var(--type-monde); border-color: #f6d1da; }
   .badge.t-selective { color: var(--type-sel); border-color: #d3dbe3; }
   .badge.t-open { color: var(--type-open); border-color: #eedeb8; }
   .when { font-size: .95rem; margin: 6px 0; }
@@ -163,6 +169,9 @@
       <button class="chip" data-type="manche_cdf" type="button">Coupe de France</button>
       <button class="chip" data-type="championnat_france" type="button">Championnat de France</button>
       <button class="chip" data-type="championnat_regional" type="button">Championnat régional</button>
+      <button class="chip" data-type="championnat_interregional" type="button">Inter-régional</button>
+      <button class="chip" data-type="championnat_departemental" type="button">Départemental</button>
+      <button class="chip" data-type="championnat_monde" type="button">Chpts du monde (AIDA)</button>
       <button class="chip" data-type="selective" type="button">Sélective</button>
       <button class="chip" data-type="open" type="button">Open</button>
     </div>
@@ -181,428 +190,6 @@
 </main>
 
 <script>
-window.__PRESET_DATA__ = {
-  "dataset_version": "2026-11-06.1",
-  "as_of": "2026-11-06",
-  "scope": "France, saison 2026-2027, compétitions d'apnée FFESSM (fédéral et régional documenté) et AIDA France (aucune compétition AIDA publiée au format calendrier à cette date).",
-  "disclaimer": "Agrégateur non officiel. Données assemblées à la main depuis les sources ci-dessous. Toujours confirmer dates, lieux et modalités d'inscription sur les pages officielles. Les liens d'inscription sont publiés par les organisateurs, généralement quelques semaines avant l'événement.",
-  "sources": [
-    {
-      "id": "ffessm-national",
-      "name": "FFESSM — Commission Nationale Apnée, calendrier des compétitions",
-      "url": "https://apnee.ffessm.fr/calendrier-saison-sportive",
-      "type": "fédération (officiel)",
-      "monitor": true
-    },
-    {
-      "id": "cna-gestion",
-      "name": "CNA — Gestion des compétitions (protocoles officiels)",
-      "url": "https://g-competitions-cna.fr/",
-      "type": "fédération (officiel)",
-      "monitor": true
-    },
-    {
-      "id": "cr-idf",
-      "name": "FFESSM Île-de-France — Commission Apnée (calendrier régional)",
-      "url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
-      "type": "comité régional (officiel)",
-      "monitor": true
-    },
-    {
-      "id": "cr-centre",
-      "name": "Comité Centre FFESSM — calendrier apnée 2026-2027",
-      "url": "https://centreffessm.fr/actualites/apnee/apnee-calendrier-des-competitions-2026-2027/",
-      "type": "comité régional (officiel)",
-      "monitor": true
-    },
-    {
-      "id": "cd95",
-      "name": "FFESSM Codep 95 — dates apnée 2026-2027",
-      "url": "https://www.ffessm95.fr/2026/09/28/apnee-2026-2027-formations-competitions/",
-      "type": "comité départemental (officiel)",
-      "monitor": true
-    },
-    {
-      "id": "csa-agen",
-      "name": "Club Subaquatique Agenais — page compétition (reprend les manches de Coupe de France)",
-      "url": "https://www.agenplongee.com/pages/les-commissions/apnee/competition.html",
-      "type": "site de club (source secondaire)",
-      "monitor": true
-    },
-    {
-      "id": "aida-france",
-      "name": "AIDA France (annonces compétitions)",
-      "url": "https://aidafrance.fr/",
-      "type": "fédération (officiel)",
-      "monitor": true
-    }
-  ],
-  "events": [
-    {
-      "id": "cdm-epinal-2026",
-      "federation": "FFESSM",
-      "type": "manche_cdf",
-      "name": "Manche de Coupe de France",
-      "start": "2026-11-28",
-      "end": "2026-11-29",
-      "city": "Épinal",
-      "department": "88",
-      "lat": 48.1725,
-      "lon": 6.4497,
-      "organizer": "Club organisateur local (à confirmer sur le protocole)",
-      "info_url": "https://apnee.ffessm.fr/calendrier-saison-sportive",
-      "source_id": "csa-agen",
-      "source_url": "https://www.agenplongee.com/pages/les-commissions/apnee/competition.html",
-      "verified_on": "2026-11-06",
-      "notes": "Source secondaire (page club reprenant le calendrier fédéral). Confirmer sur le protocole officiel CNA."
-    },
-    {
-      "id": "cdm-dunkerque-2026",
-      "federation": "FFESSM",
-      "type": "manche_cdf",
-      "name": "Manche de Coupe de France",
-      "start": "2026-12-05",
-      "end": "2026-12-06",
-      "city": "Dunkerque",
-      "department": "59",
-      "lat": 51.0345,
-      "lon": 2.3769,
-      "organizer": "Club organisateur local (à confirmer sur le protocole)",
-      "info_url": "https://apnee.ffessm.fr/calendrier-saison-sportive",
-      "source_id": "csa-agen",
-      "source_url": "https://www.agenplongee.com/pages/les-commissions/apnee/competition.html",
-      "verified_on": "2026-11-06",
-      "notes": "Source secondaire (page club). Confirmer sur le protocole officiel CNA."
-    },
-    {
-      "id": "selective-kremlin-bicetre-2026",
-      "federation": "FFESSM",
-      "type": "selective",
-      "name": "Compétition d'apnée du Kremlin-Bicêtre",
-      "start": "2026-11-14",
-      "end": null,
-      "city": "Le Kremlin-Bicêtre",
-      "department": "94",
-      "lat": 48.8116,
-      "lon": 2.3599,
-      "organizer": "Commission Apnée Île-de-France / club local",
-      "info_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
-      "source_id": "cr-idf",
-      "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
-      "verified_on": "2026-11-06",
-      "notes": ""
-    },
-    {
-      "id": "selective-clamart-2026",
-      "federation": "FFESSM",
-      "type": "selective",
-      "name": "Apnées franciliennes de Clamart",
-      "start": "2026-12-13",
-      "end": null,
-      "city": "Clamart",
-      "department": "92",
-      "lat": 48.8017,
-      "lon": 2.2662,
-      "organizer": "Commission Apnée Île-de-France / club local",
-      "info_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
-      "source_id": "cr-idf",
-      "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
-      "verified_on": "2026-11-06",
-      "notes": ""
-    },
-    {
-      "id": "cdm-massy-2027",
-      "federation": "FFESSM",
-      "type": "manche_cdf",
-      "name": "Compétition d'apnée de Massy — Manche de Coupe de France",
-      "start": "2027-01-23",
-      "end": "2027-01-24",
-      "city": "Massy",
-      "department": "91",
-      "lat": 48.7264,
-      "lon": 2.2703,
-      "organizer": "Hippocampe Club Entente Sportive Massy (à confirmer)",
-      "info_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
-      "source_id": "cr-idf",
-      "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
-      "verified_on": "2026-11-06",
-      "notes": "Date confirmée par deux sources (comité régional IdF et page club CSA Agen). Le Codep 95 signale des dates à vérifier."
-    },
-    {
-      "id": "selective-chesnay-2027",
-      "federation": "FFESSM",
-      "type": "selective",
-      "name": "Compétition d'apnée du Chesnay-Rocquencourt",
-      "start": "2027-01-10",
-      "end": null,
-      "city": "Le Chesnay-Rocquencourt",
-      "department": "78",
-      "lat": 48.8242,
-      "lon": 2.1256,
-      "organizer": "Commission Apnée Île-de-France / club local",
-      "info_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
-      "source_id": "cr-idf",
-      "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
-      "verified_on": "2026-11-06",
-      "notes": ""
-    },
-    {
-      "id": "selective-fontenay-2027",
-      "federation": "FFESSM",
-      "type": "selective",
-      "name": "Compétition d'apnée de Fontenay-sous-Bois",
-      "start": "2027-01-17",
-      "end": null,
-      "city": "Fontenay-sous-Bois",
-      "department": "94",
-      "lat": 48.8489,
-      "lon": 2.477,
-      "organizer": "Commission Apnée Île-de-France / club local",
-      "info_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
-      "source_id": "cr-idf",
-      "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
-      "verified_on": "2026-11-06",
-      "notes": ""
-    },
-    {
-      "id": "cdm-agen-2027",
-      "federation": "FFESSM",
-      "type": "manche_cdf",
-      "name": "Manche de Coupe de France",
-      "start": "2027-01-30",
-      "end": "2027-01-31",
-      "city": "Agen",
-      "department": "47",
-      "lat": 44.203,
-      "lon": 0.6215,
-      "organizer": "Club Subaquatique Agenais (à confirmer)",
-      "info_url": "https://www.agenplongee.com/pages/les-commissions/apnee/competition.html",
-      "source_id": "csa-agen",
-      "source_url": "https://www.agenplongee.com/pages/les-commissions/apnee/competition.html",
-      "verified_on": "2026-11-06",
-      "notes": "Club historiquement organisateur de la manche d'Agen."
-    },
-    {
-      "id": "selective-fresnes-2027",
-      "federation": "FFESSM",
-      "type": "selective",
-      "name": "Compétition de Fresnes",
-      "start": "2027-02-07",
-      "end": null,
-      "city": "Fresnes",
-      "department": "94",
-      "lat": 48.7572,
-      "lon": 2.3297,
-      "organizer": "Commission Apnée Île-de-France / club local",
-      "info_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
-      "source_id": "cr-idf",
-      "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
-      "verified_on": "2026-11-06",
-      "notes": ""
-    },
-    {
-      "id": "selective-mennecy-2027",
-      "federation": "FFESSM",
-      "type": "selective",
-      "name": "Compétition d'apnée de Mennecy",
-      "start": "2027-02-28",
-      "end": null,
-      "city": "Mennecy",
-      "department": "91",
-      "lat": 48.5628,
-      "lon": 2.4345,
-      "organizer": "Commission Apnée Île-de-France / club local",
-      "info_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
-      "source_id": "cr-idf",
-      "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
-      "verified_on": "2026-11-06",
-      "notes": ""
-    },
-    {
-      "id": "selective-mantes-2027",
-      "federation": "FFESSM",
-      "type": "selective",
-      "name": "Compétition d'apnée de Mantes",
-      "start": "2027-03-06",
-      "end": null,
-      "city": "Mantes-la-Jolie",
-      "department": "78",
-      "lat": 48.9895,
-      "lon": 1.6904,
-      "organizer": "Commission Apnée Île-de-France / club local",
-      "info_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
-      "source_id": "cr-idf",
-      "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
-      "verified_on": "2026-11-06",
-      "notes": ""
-    },
-    {
-      "id": "cdm-besancon-2027",
-      "federation": "FFESSM",
-      "type": "manche_cdf",
-      "name": "Manche de Coupe de France",
-      "start": "2027-03-13",
-      "end": "2027-03-14",
-      "city": "Besançon",
-      "department": "25",
-      "lat": 47.2428,
-      "lon": 6.0243,
-      "organizer": "Club organisateur local (à confirmer sur le protocole)",
-      "info_url": "https://apnee.ffessm.fr/calendrier-saison-sportive",
-      "source_id": "csa-agen",
-      "source_url": "https://www.agenplongee.com/pages/les-commissions/apnee/competition.html",
-      "verified_on": "2026-11-06",
-      "notes": "Source secondaire (page club). Confirmer sur le protocole officiel CNA."
-    },
-    {
-      "id": "selective-melun-2027",
-      "federation": "FFESSM",
-      "type": "selective",
-      "name": "Melunaise d'apnée — Trophée Alain Bertoncello",
-      "start": "2027-03-14",
-      "end": null,
-      "city": "Melun",
-      "department": "77",
-      "lat": 48.5405,
-      "lon": 2.66,
-      "organizer": "Union Sportive de Melun (à confirmer)",
-      "info_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
-      "source_id": "cr-idf",
-      "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
-      "verified_on": "2026-11-06",
-      "notes": ""
-    },
-    {
-      "id": "championnat-regional-idf-2027",
-      "federation": "FFESSM",
-      "type": "championnat_regional",
-      "name": "La Royale du Dôme — Championnat régional d'apnée Île-de-France",
-      "start": "2027-03-21",
-      "end": null,
-      "city": "Saint-Germain-en-Laye",
-      "department": "78",
-      "lat": 48.8984,
-      "lon": 2.0938,
-      "organizer": "Commission Apnée Île-de-France",
-      "info_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
-      "source_id": "cr-idf",
-      "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
-      "verified_on": "2026-11-06",
-      "notes": ""
-    },
-    {
-      "id": "open-challenge91-2027",
-      "federation": "FFESSM",
-      "type": "open",
-      "name": "Open — Challenge 91",
-      "start": "2027-04-25",
-      "end": null,
-      "city": "Corbeil-Essonnes",
-      "department": "91",
-      "lat": 48.6136,
-      "lon": 2.4823,
-      "organizer": "Commission Apnée Île-de-France / club local",
-      "info_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
-      "source_id": "cr-idf",
-      "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
-      "verified_on": "2026-11-06",
-      "notes": ""
-    },
-    {
-      "id": "tropee-caneson-2027",
-      "federation": "FFESSM",
-      "type": "non_classe",
-      "name": "Trophée Canneson",
-      "start": "2027-04-25",
-      "end": null,
-      "city": null,
-      "department": "78",
-      "lat": null,
-      "lon": null,
-      "organizer": "Club organisateur (Yvelines, à confirmer)",
-      "info_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
-      "source_id": "cr-idf",
-      "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
-      "verified_on": "2026-11-06",
-      "notes": "Lieu non précisé par la source (département 78 uniquement). Type de compétition à confirmer."
-    },
-    {
-      "id": "championnat-france-2027",
-      "federation": "FFESSM",
-      "type": "championnat_france",
-      "name": "Championnat de France d'apnée piscine",
-      "start": null,
-      "end": null,
-      "city": null,
-      "department": null,
-      "lat": null,
-      "lon": null,
-      "organizer": "Commission Nationale Apnée FFESSM",
-      "info_url": "https://apnee.ffessm.fr/calendrier-saison-sportive",
-      "source_id": "csa-agen",
-      "source_url": "https://www.agenplongee.com/pages/les-commissions/apnee/competition.html",
-      "verified_on": "2026-11-06",
-      "notes": "Mai 2027, dates et ville non publiées à ce jour. À vérifier sur apnee.ffessm.fr."
-    },
-    {
-      "id": "tolosapnea-2027",
-      "federation": "FFESSM",
-      "type": "championnat_regional",
-      "name": "TOLOSAPNEA — Championnat régional d'apnée Occitanie",
-      "start": "2027-04-03",
-      "end": "2027-04-04",
-      "city": "Toulouse",
-      "department": "31",
-      "lat": 43.6045,
-      "lon": 1.4442,
-      "organizer": "Toulouse Métropole Palmes et Immersion Libre, avec la FFESSM",
-      "info_url": "https://apnee.ffessm.fr/calendrier-saison-sportive",
-      "source_id": "csa-agen",
-      "source_url": "https://www.agenplongee.com/pages/les-commissions/apnee/competition.html",
-      "verified_on": "2026-11-06",
-      "notes": "Source : communication interne club (courriel, 19/10/2026). À confirmer sur les canaux officiels FFESSM Occitanie."
-    },
-    {
-      "id": "aura-apnea-contest-2026",
-      "federation": "FFESSM",
-      "type": "non_classe",
-      "name": "AURA APNEA CONTEST 2026",
-      "start": "2026-11-01",
-      "end": null,
-      "city": "Saint-Bel",
-      "department": "69",
-      "lat": 45.8367,
-      "lon": 4.6039,
-      "organizer": "Comité régional AURA",
-      "info_url": "https://g-competitions-cna.fr/",
-      "source_id": "cna-gestion",
-      "source_url": "https://g-competitions-cna.fr/",
-      "verified_on": "2026-11-06",
-      "notes": "Passé. Niveau de compétition non précisé par la source."
-    },
-    {
-      "id": "open-beauvais-2026",
-      "federation": "FFESSM",
-      "type": "open",
-      "name": "Open d'Apnée de Beauvais",
-      "start": "2026-10-11",
-      "end": null,
-      "city": "Beauvais",
-      "department": "60",
-      "lat": 49.4303,
-      "lon": 2.0833,
-      "organizer": "Club local (à confirmer)",
-      "info_url": "https://g-competitions-cna.fr/",
-      "source_id": "cna-gestion",
-      "source_url": "https://g-competitions-cna.fr/",
-      "verified_on": "2026-11-06",
-      "notes": "Passé."
-    }
-  ]
-};
-</script>
-<script>
-
 "use strict";
 
 const PRESET_CITIES = [
@@ -625,6 +212,9 @@ const TYPE_LABELS = {
   manche_cdf: "Manche de Coupe de France",
   championnat_france: "Championnat de France",
   championnat_regional: "Championnat régional",
+  championnat_interregional: "Championnat inter-régional",
+  championnat_departemental: "Championnat départemental",
+  championnat_monde: "Championnat du monde AIDA",
   selective: "Officielle sélective",
   open: "Open",
   non_classe: "Type à confirmer"
@@ -885,6 +475,5 @@ function initControls() {
 initControls();
 loadData();
 </script>
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" nonce="6UilVat87elE8d2n16ZSig==" data-cf-beacon='{"version":"2024.11.0","token":"36b4216ae2dc4d5488c249161e71fe1e","spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>
