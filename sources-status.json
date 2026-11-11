@@ -1,51 +1,51 @@
 {
-  "last_run": "2026-11-10T14:04:51.896Z",
+  "last_run": "2026-11-11T13:22:40.831Z",
   "sources": {
     "ffessm-declarations": {
       "url": "https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/gviz/tq?tqx=out:csv",
-      "checked_at": "2026-11-10T14:04:42.264Z",
+      "checked_at": "2026-11-11T13:22:22.456Z",
       "status": 200,
       "hash": "10966bf0dbf3071a52fcd7d75d73d3122a49de7799d7afc99886760df2969ba2",
       "changed": false
     },
     "ffessm-national": {
       "url": "https://apnee.ffessm.fr/calendrier-saison-sportive",
-      "checked_at": "2026-11-10T14:04:43.176Z",
+      "checked_at": "2026-11-11T13:22:23.489Z",
       "status": 200,
       "hash": "e0f4ad7b5df770f3f01104490cac3d34ded6ff0ca71f6be6e4bc5870a166aea8",
       "changed": false
     },
     "cna-gestion": {
       "url": "https://g-competitions-cna.fr/",
-      "checked_at": "2026-11-10T14:04:44.358Z",
+      "checked_at": "2026-11-11T13:22:24.725Z",
       "status": 200,
-      "hash": "7338025be6a93208a7a43ca0551ef391390b82554e8510c68cc821f0d4c024e3",
+      "hash": "c5836be13ef25ba9dea402ae41fe2e8750006f60df3f53c0b33f4c88339e1764",
       "changed": true
     },
     "cr-idf": {
       "url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
-      "checked_at": "2026-11-10T14:04:45.377Z",
+      "checked_at": "2026-11-11T13:22:26.676Z",
       "status": 200,
-      "hash": "db7ca2b5f5b02bba83e08f33e7f56082856415e18c71b742a3ab84f682a80319",
+      "hash": "0c98661e260680e9dd44737a1509ffe5166b2c45feb71f7d4b93da5041de6095",
       "changed": true
     },
     "cr-centre": {
       "url": "https://centreffessm.fr/actualites/apnee/apnee-calendrier-des-competitions-2026-2027/",
-      "checked_at": "2026-11-10T14:04:48.575Z",
+      "checked_at": "2026-11-11T13:22:29.794Z",
       "status": 200,
-      "hash": "8b8ba42dbdef151c2c645027bf0c1ad111e58a6d23acbedfcf2f99cfc5cbd172",
+      "hash": "a5a49f288ce768cbc5708ed7207a051d78f0b66d463417d2bf98f01a34340161",
       "changed": true
     },
     "cd95": {
       "url": "https://www.ffessm95.fr/2026/09/28/apnee-2026-2027-formations-competitions/",
-      "checked_at": "2026-11-10T14:04:50.548Z",
+      "checked_at": "2026-11-11T13:22:39.170Z",
       "status": 200,
       "hash": "358b0d7316d37625c97cc39295d7b64a6df43f90cc0ed9d5b180d6831e70c992",
       "changed": false
     },
     "aida-france": {
       "url": "https://aidafrance.fr/actualites/",
-      "checked_at": "2026-11-10T14:04:51.106Z",
+      "checked_at": "2026-11-11T13:22:39.951Z",
       "status": 200,
       "hash": "688c88e9abb1f8ee4726179be9832626b54c5733f8e857c926638bf8c4de8c46",
       "changed": false
