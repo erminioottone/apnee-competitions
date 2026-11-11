@@ -9,6 +9,7 @@ import {
   readDeclarations,
   extractStructuredEvents,
   semanticHTML,
+  sourceFingerprintHTML,
   pageDateEvidence,
 } from "../scripts/lib/importer.mjs";
 test("French explicit multi-day ranges and durations", () => {
@@ -100,5 +101,21 @@ test("Regional pages supply missing end dates only for the matching city", () =>
   assert.deepEqual(
     pageDateEvidence({ city: "Paris", start: "2027-01-23" }, html),
     [],
+  );
+});
+test("Replacement posters and PDF links change the source fingerprint", () => {
+  const a =
+    '<p>Calendrier</p><a href="season-1.pdf">Télécharger</a><img src="poster-1.jpg"><script>randomA</script>';
+  assert.notEqual(
+    sourceFingerprintHTML(a),
+    sourceFingerprintHTML(a.replace("season-1.pdf", "season-2.pdf")),
+  );
+  assert.notEqual(
+    sourceFingerprintHTML(a),
+    sourceFingerprintHTML(a.replace("poster-1.jpg", "poster-2.jpg")),
+  );
+  assert.equal(
+    sourceFingerprintHTML(a),
+    sourceFingerprintHTML(a.replace("randomA", "randomB")),
   );
 });

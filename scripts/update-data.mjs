@@ -15,6 +15,7 @@ import {
   readDeclarations,
   inferEndDate,
   semanticHTML,
+  sourceFingerprintHTML,
   decodeHTML,
   extractStructuredEvents,
   pageDateEvidence,
@@ -79,11 +80,11 @@ export function monitorEntry(
   const digest = success.hash,
     changed =
       !!previous?.hash &&
-      !(previous.checked_at && !previous.algorithm) &&
+      !(previous.checked_at && previous.algorithm !== "semantic-assets-v2") &&
       previous.hash !== digest,
     reviewed = handled || acknowledged === digest;
   return {
-    algorithm: "semantic-v1",
+    algorithm: "semantic-assets-v2",
     url: success.url,
     status: success.status,
     checked_at: now,
@@ -628,7 +629,7 @@ export async function updateData({
           );
           handled = true;
         } else {
-          digest = hash(semanticHTML(response.text));
+          digest = hash(sourceFingerprintHTML(response.text));
           if (s.adapter === "structured_events") {
             const imported = await structuredImport(
               response.text,

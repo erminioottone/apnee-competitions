@@ -292,6 +292,20 @@ export function semanticHTML(html) {
     .replace(/\s+/g, " ")
     .trim();
 }
+export function sourceFingerprintHTML(html) {
+  const content = html.replace(
+    /<(script|style|nav|footer|header)\b[^>]*>[\s\S]*?<\/\1>/gi,
+    " ",
+  );
+  const references = [
+    ...content.matchAll(
+      /<(?:a|img|iframe|source)\b[^>]*?(?:href|src)\s*=\s*["']([^"']+)["']/gi,
+    ),
+  ]
+    .map((match) => decodeHTML(match[1]).trim())
+    .filter(Boolean);
+  return semanticHTML(html) + "\n" + [...new Set(references)].sort().join("\n");
+}
 export function extractStructuredEvents(html) {
   const out = [];
   const visit = (x) => {
