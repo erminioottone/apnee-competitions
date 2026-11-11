@@ -1,0 +1,513 @@
+{
+  "updates": [
+    {
+      "at": "2026-11-11T13:55:32.079Z",
+      "changes": [
+        {
+          "id": "aida-wc-indoor-2026",
+          "name": "AIDA World Championship Indoor 2026 — Budapest",
+          "kind": "updated",
+          "start": "2026-05-31",
+          "end": "2026-06-06"
+        },
+        {
+          "id": "aida-wc-outdoor-2026",
+          "name": "AIDA World Championship Outdoor 2026 — Limassol",
+          "kind": "updated",
+          "start": "2026-09-27",
+          "end": "2026-10-10"
+        },
+        {
+          "id": "2026-10-11-beauvais-2e-open-d-apnee-de-b",
+          "name": "2e Open d’Apnée de Beauvais",
+          "kind": "updated",
+          "start": "2026-10-11",
+          "end": null
+        },
+        {
+          "id": "2026-11-01-saint-bel-aura-apnea-contest",
+          "name": "AURA APNEA CONTEST",
+          "kind": "updated",
+          "start": "2026-11-01",
+          "end": null
+        },
+        {
+          "id": "2026-11-08-cherbourg-en-cotentin-open-d-apnee-de-cher",
+          "name": "Open d'Apnée de Cherbourg",
+          "kind": "updated",
+          "start": "2026-11-08",
+          "end": null
+        },
+        {
+          "id": "2026-11-08-saint-cyr-sur-loire-trophee-abyss",
+          "name": "Trophée Abyss",
+          "kind": "updated",
+          "start": "2026-11-08",
+          "end": null
+        },
+        {
+          "id": "2026-11-11-marcq-en-bar-ul-competition-d-apnee-",
+          "name": "Compétition d'apnée # 10 de Marcq en Baroeul",
+          "kind": "updated",
+          "start": "2026-11-11",
+          "end": null
+        },
+        {
+          "id": "2026-11-14-le-kremlin-bicetre-trophee-camille-muff",
+          "name": "Trophée Camille Muffat",
+          "kind": "updated",
+          "start": "2026-11-14",
+          "end": null
+        },
+        {
+          "id": "2026-11-21-saint-leu-2eme-competition-d-a",
+          "name": "2ème compétition d'apnée de Saint-Leu",
+          "kind": "updated",
+          "start": "2026-11-21",
+          "end": null
+        },
+        {
+          "id": "2026-11-22-elbeuf-challenge-d-apnee-d-",
+          "name": "Challenge d'Apnée d'Elbeuf",
+          "kind": "updated",
+          "start": "2026-11-22",
+          "end": null
+        },
+        {
+          "id": "2026-11-28-epinal-premiere-manche-de-c",
+          "name": "Première Manche de Coupe de France Apnée indoor",
+          "kind": "updated",
+          "start": "2026-11-28",
+          "end": "2026-11-29"
+        },
+        {
+          "id": "2026-11-29-bordeaux-trophee-bord-eau",
+          "name": "Trophée Bord'eau",
+          "kind": "updated",
+          "start": "2026-11-29",
+          "end": null
+        },
+        {
+          "id": "2026-12-05-dunkerque-deuxieme-manche-de-c",
+          "name": "Deuxième Manche de Coupe de France Apnée indoor",
+          "kind": "updated",
+          "start": "2026-12-05",
+          "end": null
+        },
+        {
+          "id": "2026-12-12-mulhouse-et-huningue-12eme-coupe-de-noel",
+          "name": "12ème Coupe de Noël",
+          "kind": "updated",
+          "start": "2026-12-12",
+          "end": null
+        },
+        {
+          "id": "2026-12-12-saint-chamond-open-42",
+          "name": "OPEN 42",
+          "kind": "updated",
+          "start": "2026-12-12",
+          "end": null
+        },
+        {
+          "id": "2026-12-13-clamart-les-apnees-francilie",
+          "name": "LES APNEES FRANCILIENNES DE CLAMART",
+          "kind": "updated",
+          "start": "2026-12-13",
+          "end": null
+        },
+        {
+          "id": "2026-12-13-montargis-venise-du-gatinais",
+          "name": "Venise du Gâtinais",
+          "kind": "updated",
+          "start": "2026-12-13",
+          "end": null
+        },
+        {
+          "id": "2026-12-13-venelles-championnat-departem",
+          "name": "Championnat Départemental 13",
+          "kind": "updated",
+          "start": "2026-12-13",
+          "end": null
+        },
+        {
+          "id": "2027-01-10-le-chesnay-sub-galatee",
+          "name": "Sub Galatée",
+          "kind": "updated",
+          "start": "2027-01-10",
+          "end": null
+        },
+        {
+          "id": "2027-01-10-rillieux-la-pape-aura-apnea-contest-2",
+          "name": "Aura Apnea Contest 2027",
+          "kind": "updated",
+          "start": "2027-01-10",
+          "end": null
+        },
+        {
+          "id": "2027-01-13-joue-les-tours-defi-37-dnf",
+          "name": "DEFI 37 DNF",
+          "kind": "updated",
+          "start": "2027-01-13",
+          "end": null
+        },
+        {
+          "id": "2027-01-17-fontenay-sous-bois-apnee-fontenay-chall",
+          "name": "Apnée Fontenay Challenge",
+          "kind": "updated",
+          "start": "2027-01-17",
+          "end": null
+        },
+        {
+          "id": "2027-01-21-loches-defi-37-dyn",
+          "name": "DEFI 37 DYN",
+          "kind": "updated",
+          "start": "2027-01-21",
+          "end": null
+        },
+        {
+          "id": "2027-01-23-massy-troisieme-manche-de-",
+          "name": "Troisième Manche de Coupe de France Apnée indoor",
+          "kind": "updated",
+          "start": "2027-01-23",
+          "end": "2027-01-24"
+        },
+        {
+          "id": "2027-01-23-saint-cyr-sur-loire-defi-37-sta",
+          "name": "DEFI 37 STA",
+          "kind": "updated",
+          "start": "2027-01-23",
+          "end": null
+        },
+        {
+          "id": "2027-01-24-montceau-les-mines-bfc-competition-regi",
+          "name": "BFC COMPETITION REGIONALE MONTCEAU",
+          "kind": "updated",
+          "start": "2027-01-24",
+          "end": null
+        },
+        {
+          "id": "2027-01-24-reims-13eme-coupe-des-sacr",
+          "name": "13ème Coupe des Sacres",
+          "kind": "updated",
+          "start": "2027-01-24",
+          "end": null
+        },
+        {
+          "id": "2027-01-27-le-lamentin-madinina-static-cup",
+          "name": "Madinina Static Cup",
+          "kind": "updated",
+          "start": "2027-01-27",
+          "end": null
+        },
+        {
+          "id": "2027-01-30-agen-quatrieme-manche-de-",
+          "name": "Quatrième Manche de Coupe de France Apnée indoor",
+          "kind": "updated",
+          "start": "2027-01-30",
+          "end": null
+        },
+        {
+          "id": "2027-01-31-saint-etienne-saint-etienne-apnee-",
+          "name": "Saint-Etienne Apnée Challenge 2027",
+          "kind": "updated",
+          "start": "2027-01-31",
+          "end": null
+        },
+        {
+          "id": "2027-01-31-sarrebourg-coupe-des-furies",
+          "name": "Coupe des Furies",
+          "kind": "updated",
+          "start": "2027-01-31",
+          "end": null
+        },
+        {
+          "id": "2027-01-31-toulon-competition-d-apnee-",
+          "name": "Compétition d’apnée Toulon",
+          "kind": "updated",
+          "start": "2027-01-31",
+          "end": null
+        },
+        {
+          "id": "2027-02-07-fresnes-valdemarnaise-d-apne",
+          "name": "Valdemarnaise d'apnée",
+          "kind": "updated",
+          "start": "2027-02-07",
+          "end": null
+        },
+        {
+          "id": "2027-02-07-vitre-cvas-apnee-contest",
+          "name": "CVAS Apnée Contest",
+          "kind": "updated",
+          "start": "2027-02-07",
+          "end": null
+        },
+        {
+          "id": "2027-02-10-le-lamentin-madinina-winter-cup",
+          "name": "Madinina Winter Cup",
+          "kind": "updated",
+          "start": "2027-02-10",
+          "end": null
+        },
+        {
+          "id": "2027-02-12-noumea-challenge-apnea-2027",
+          "name": "Challenge Apnéa 2027",
+          "kind": "updated",
+          "start": "2027-02-12",
+          "end": "2027-02-13"
+        },
+        {
+          "id": "2027-02-14-forbach-coupe-donald-chrosci",
+          "name": "Coupe Donald CHROSCIANY",
+          "kind": "updated",
+          "start": "2027-02-14",
+          "end": null
+        },
+        {
+          "id": "2027-02-19-noumea-challenge-apnea-2027",
+          "name": "Challenge Apnéa 2027",
+          "kind": "updated",
+          "start": "2027-02-19",
+          "end": "2027-02-20"
+        },
+        {
+          "id": "2027-02-21-chateaubriant-competition-regional",
+          "name": "Compétition Régionale Apnée - Pays-de-la-Loire",
+          "kind": "updated",
+          "start": "2027-02-21",
+          "end": null
+        },
+        {
+          "id": "2027-02-26-noumea-challenge-apnea",
+          "name": "Challenge Apnéa",
+          "kind": "updated",
+          "start": "2027-02-26",
+          "end": "2027-02-27"
+        },
+        {
+          "id": "2027-02-27-manosque-competition-apnee-ma",
+          "name": "Compétition apnée Manosque",
+          "kind": "updated",
+          "start": "2027-02-27",
+          "end": null
+        },
+        {
+          "id": "2027-02-27-saint-die-des-vosges-americ-apnee",
+          "name": "Americ'Apnée",
+          "kind": "updated",
+          "start": "2027-02-27",
+          "end": null
+        },
+        {
+          "id": "2027-02-28-mennecy-1er-defi-d-apnee-orq",
+          "name": "1er défi d'apnée Orquoise",
+          "kind": "updated",
+          "start": "2027-02-28",
+          "end": null
+        },
+        {
+          "id": "2027-02-28-nimes-coupe-des-plongeurs-",
+          "name": "Coupe des Plongeurs Libres 2027",
+          "kind": "updated",
+          "start": "2027-02-28",
+          "end": null
+        },
+        {
+          "id": "2027-02-28-saint-raphael-competition-d-apnee-",
+          "name": "Compétition d'apnée de Saint-Raphaël",
+          "kind": "updated",
+          "start": "2027-02-28",
+          "end": null
+        },
+        {
+          "id": "2027-03-05-noumea-challenge-d-ete-apne",
+          "name": "Challenge d'été Apnéa 2027",
+          "kind": "updated",
+          "start": "2027-03-05",
+          "end": "2027-03-06"
+        },
+        {
+          "id": "2027-03-06-le-port-championnat-regional",
+          "name": "Championnat régional d'apnée de la Réunion 2027",
+          "kind": "updated",
+          "start": "2027-03-06",
+          "end": null
+        },
+        {
+          "id": "2027-03-06-mantes-la-jolie-10eme-meeting-de-man",
+          "name": "10ème Meeting de Mantes en Yvelines",
+          "kind": "updated",
+          "start": "2027-03-06",
+          "end": null
+        },
+        {
+          "id": "2027-03-06-saint-esprit-championnat-inter-re",
+          "name": "Championnat inter-regional Antilles-Guyane",
+          "kind": "updated",
+          "start": "2027-03-06",
+          "end": null
+        },
+        {
+          "id": "2027-03-13-besancon-cinquieme-manche-de-",
+          "name": "Cinquième Manche de Coupe de France Apnée indoor",
+          "kind": "updated",
+          "start": "2027-03-13",
+          "end": null
+        },
+        {
+          "id": "2027-03-14-grand-couronne-championnat-de-norma",
+          "name": "Championnat de Normandie d'Apnée",
+          "kind": "updated",
+          "start": "2027-03-14",
+          "end": null
+        },
+        {
+          "id": "2027-03-14-melun-melunaise-d-apnee-tr",
+          "name": "Melunaise d'Apnée Trophée Alain Bertoncello",
+          "kind": "updated",
+          "start": "2027-03-14",
+          "end": null
+        },
+        {
+          "id": "2027-03-19-noumea-championnat-regional",
+          "name": "Championnat Régional FFESSM Nouvelle-Calédonie 2027",
+          "kind": "updated",
+          "start": "2027-03-19",
+          "end": "2027-03-20"
+        },
+        {
+          "id": "2027-03-20-nimes-les-trophees-gardois",
+          "name": "Les Trophées Gardois Acte 5",
+          "kind": "updated",
+          "start": "2027-03-20",
+          "end": null
+        },
+        {
+          "id": "2027-03-21-les-abymes-7eme-trophee-de-citr",
+          "name": "7ème Trophée de Citron Bleu",
+          "kind": "updated",
+          "start": "2027-03-21",
+          "end": null
+        },
+        {
+          "id": "2027-03-21-orange-trophee-orca",
+          "name": "Trophée ORCA",
+          "kind": "updated",
+          "start": "2027-03-21",
+          "end": null
+        },
+        {
+          "id": "2027-03-21-saint-germain-en-laye-royale-du-dome",
+          "name": "Royale du Dôme",
+          "kind": "updated",
+          "start": "2027-03-21",
+          "end": null
+        },
+        {
+          "id": "2027-03-26-noumea-championnat-regional",
+          "name": "Championnat Régional FFESSM Nouvelle-Calédonie 2027",
+          "kind": "updated",
+          "start": "2027-03-26",
+          "end": "2027-03-27"
+        },
+        {
+          "id": "2027-03-28-nice-competition-regional",
+          "name": "Compétition Régionale Sud",
+          "kind": "updated",
+          "start": "2027-03-28",
+          "end": null
+        },
+        {
+          "id": "2027-03-28-tours-championnat-regional",
+          "name": "Championnat régionale Centre-Val de Loire",
+          "kind": "updated",
+          "start": "2027-03-28",
+          "end": null
+        },
+        {
+          "id": "2027-04-02-noumea-championnat-regional",
+          "name": "Championnat Régional de Nouvelle-Calédonie",
+          "kind": "updated",
+          "start": "2027-04-02",
+          "end": null
+        },
+        {
+          "id": "2027-04-03-angouleme-charente-apnea-conte",
+          "name": "Charente Apnea Contest",
+          "kind": "updated",
+          "start": "2027-04-03",
+          "end": "2027-04-04"
+        },
+        {
+          "id": "2027-04-03-toulouse-tolosapnea",
+          "name": "TOLOSAPNEA",
+          "kind": "updated",
+          "start": "2027-04-03",
+          "end": "2027-04-04"
+        },
+        {
+          "id": "2027-04-04-bastia-crac-6-championnat-r",
+          "name": "CRAC 6 (Championnat Régional Apnée Corse 6 eme édition)",
+          "kind": "updated",
+          "start": "2027-04-04",
+          "end": null
+        },
+        {
+          "id": "2027-04-04-caen-competition-inter-re",
+          "name": "Compétition Inter-régionale Normandie Bretagne Pays de Loire",
+          "kind": "updated",
+          "start": "2027-04-04",
+          "end": null
+        },
+        {
+          "id": "2027-04-04-la-rochelle-competition-apnee-la",
+          "name": "Compétition apnée La Rochelle",
+          "kind": "updated",
+          "start": "2027-04-04",
+          "end": null
+        },
+        {
+          "id": "2027-04-04-strasbourg-coupe-euro-apnee",
+          "name": "Coupe Euro-apnée",
+          "kind": "updated",
+          "start": "2027-04-04",
+          "end": null
+        },
+        {
+          "id": "2027-04-17-mulhouse-15eme-coupe-des-corm",
+          "name": "15ème Coupe des Cormorans",
+          "kind": "updated",
+          "start": "2027-04-17",
+          "end": null
+        },
+        {
+          "id": "2027-04-25-corbeil-essonnes-challenge-91-ed5",
+          "name": "Challenge 91 Ed5",
+          "kind": "updated",
+          "start": "2027-04-25",
+          "end": null
+        },
+        {
+          "id": "2027-04-25-trophee-canneson",
+          "name": "Trophée Canneson",
+          "kind": "added",
+          "start": "2027-04-25",
+          "end": null
+        },
+        {
+          "id": "2027-06-06-saint-jean-de-braye-championnat-departem",
+          "name": "Championnat Départemental d'Apnée du Loiret",
+          "kind": "updated",
+          "start": "2027-06-06",
+          "end": null
+        },
+        {
+          "id": "championnat-france-2027",
+          "name": "Championnat de France",
+          "kind": "updated",
+          "start": null,
+          "end": null
+        }
+      ]
+    }
+  ]
+}

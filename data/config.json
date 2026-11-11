@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "site_url": "https://erminioottone.github.io/apnee-competitions/",
+  "disclaimer": "Outil indépendant de la FFESSM et d’AIDA France. Vérifiez dates, lieux et inscriptions auprès des organisateurs. Les coordonnées sont approximatives au niveau communal.",
+  "sources": [
+    {
+      "id": "ffessm-declarations",
+      "name": "FFESSM CNA — déclarations officielles des compétitions 2026-2027 (feuille de suivi)",
+      "url": "https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/gviz/tq?tqx=out:csv",
+      "type": "fédération (officiel)",
+      "monitor": true,
+      "adapter": "ffessm_csv"
+    },
+    {
+      "id": "ffessm-national",
+      "name": "FFESSM — Commission Nationale Apnée, calendrier de la saison sportive",
+      "url": "https://apnee.ffessm.fr/calendrier-saison-sportive",
+      "type": "fédération (officiel)",
+      "monitor": true,
+      "adapter": "monitor"
+    },
+    {
+      "id": "cna-gestion",
+      "name": "CNA — Gestion des compétitions (protocoles officiels et résultats)",
+      "url": "https://g-competitions-cna.fr/",
+      "type": "fédération (officiel)",
+      "monitor": true,
+      "adapter": "monitor"
+    },
+    {
+      "id": "cr-idf",
+      "name": "FFESSM Île-de-France — Commission Apnée",
+      "url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
+      "type": "comité régional (officiel)",
+      "monitor": true,
+      "adapter": "monitor"
+    },
+    {
+      "id": "cr-centre",
+      "name": "Comité Centre FFESSM — calendrier apnée 2026-2027",
+      "url": "https://centreffessm.fr/actualites/apnee/apnee-calendrier-des-competitions-2026-2027/",
+      "type": "comité régional (officiel)",
+      "monitor": true,
+      "adapter": "monitor"
+    },
+    {
+      "id": "cd95",
+      "name": "FFESSM Codep 95 — dates apnée 2026-2027",
+      "url": "https://www.ffessm95.fr/2026/09/28/apnee-2026-2027-formations-competitions/",
+      "type": "comité départemental (officiel)",
+      "monitor": true,
+      "adapter": "monitor"
+    },
+    {
+      "id": "aida-france",
+      "name": "AIDA France — annonces et calendrier des compétitions",
+      "url": "https://aidafrance.fr/actualites/",
+      "type": "fédération (officiel)",
+      "monitor": true,
+      "adapter": "structured_events",
+      "federation": "AIDA"
+    }
+  ],
+  "acknowledged_hashes": {},
+  "overrides": {
+    "2027-03-28-nice-competition-regional": {
+      "reason": "Année 0207 erronée dans la déclaration ; date 2027 déjà vérifiée dans le jeu de données de la saison 2026–2027.",
+      "fields": {
+        "start": "2027-03-28"
+      },
+      "when": {
+        "raw_date": "28/03/0207"
+      }
+    },
+    "2027-02-28-saint-raphael-competition-d-apnee-": {
+      "reason": "Homonymie avec Saint-Raphaël en Dordogne : commune du Var identifiée par le code INSEE 83118.",
+      "fields": {
+        "commune_code": "83118",
+        "department": "83",
+        "lat": 43.4252,
+        "lon": 6.7684
+      },
+      "when": {
+        "city": "Saint-Raphaël"
+      }
+    }
+  },
+  "city_aliases": {
+    "Saint Bel": "Sain-Bel",
+    "Saint-Bel": "Sain-Bel",
+    "Le Chesnay": "Le Chesnay-Rocquencourt",
+    "Kremlin Bicetre": "Le Kremlin-Bicêtre",
+    "LAMENTIN:972": "Le Lamentin"
+  },
+  "minimum_source_rows": 10
+}

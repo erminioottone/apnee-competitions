@@ -1,33 +1,67 @@
-name: Source monitoring
+name: Refresh competition calendar
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - "data/config.json"
+      - ".github/workflows/monitor.yml"
   schedule:
-    # Daily at 06:00 UTC (07:00 French winter time). GitHub scheduled runs are
-    # best-effort: delays of a few minutes to ~1h are normal.
-    - cron: "0 6 * * *"
+    # Every six hours, away from the busiest minute. Scheduled runs are best-effort.
+    - cron: "17 */6 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
+  pages: write
+
+concurrency:
+  group: calendar-refresh
+  cancel-in-progress: false
 
 jobs:
   check:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Check monitored sources
-        run: node scripts/check-sources.mjs
-      - name: Commit status if changed
+      - name: Test importer and calendar behavior
+        run: npm test
+      - name: Import official events and check sources
+        run: npm run update
+      - name: Validate the generated calendar
+        run: npm run validate
+      - name: Commit generated data
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add sources-status.json
+          git add events.json sources-status.json data/locations.json review-queue.json update-history.json calendar.ics
           if git diff --cached --quiet; then
-            echo "No source changes detected."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
-            git commit -m "chore: update source monitoring status"
+            git commit -m "chore: refresh official competitions and calendar feed"
             git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+      - name: Publish the refreshed GitHub Pages data
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"
+      - name: Write refresh summary
+        if: always()
+        run: |
+          node --input-type=module - <<'JS' >> "$GITHUB_STEP_SUMMARY"
+          import fs from 'node:fs';
+          const s=JSON.parse(fs.readFileSync('sources-status.json','utf8'));
+          console.log('## Competition calendar refresh');
+          console.log(`Last attempt: ${s.last_run}`);
+          console.log(`Events: ${s.import?.event_count ?? 'unknown'}; changes: ${s.import?.changes ?? 'unknown'}; reviews: ${s.import?.review_count ?? 'unknown'}`);
+          for(const [id,e] of Object.entries(s.sources||{}))console.log(`- ${id}: ${e.error ? 'FAILED — '+e.error : e.needs_review ? 'Review pending' : 'OK'}`);
+          JS

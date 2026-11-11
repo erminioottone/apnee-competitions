@@ -1,0 +1,578 @@
+{
+  "nice:06": {
+    "city": "Nice",
+    "department": "06",
+    "commune_code": "06088",
+    "lat": 43.696,
+    "lon": 7.2714,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/06088"
+  },
+  "beauvais:60": {
+    "city": "Beauvais",
+    "department": "60",
+    "commune_code": "60057",
+    "lat": 49.4296,
+    "lon": 2.0818,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/60057"
+  },
+  "saintbel:69": {
+    "city": "Sain-Bel",
+    "department": "69",
+    "commune_code": "69171",
+    "lat": 45.8105,
+    "lon": 4.5993,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/69171"
+  },
+  "saintcyrsurloire:37": {
+    "city": "Saint-Cyr-sur-Loire",
+    "department": "37",
+    "commune_code": "37214",
+    "lat": 47.3991,
+    "lon": 0.6675,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/37214"
+  },
+  "cherbourgencotentin:50": {
+    "city": "Cherbourg-en-Cotentin",
+    "department": "50",
+    "commune_code": "50129",
+    "lat": 49.6424,
+    "lon": -1.6244,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/50129"
+  },
+  "marcqenbarul:59": {
+    "city": "Marcq-en-Barœul",
+    "department": "59",
+    "commune_code": "59378",
+    "lat": 50.6732,
+    "lon": 3.0936,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/59378"
+  },
+  "lekremlinbicetre:94": {
+    "city": "Le Kremlin-Bicêtre",
+    "department": "94",
+    "commune_code": "94043",
+    "lat": 48.8123,
+    "lon": 2.3569,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/94043"
+  },
+  "saintleu:974": {
+    "city": "Saint-Leu",
+    "department": "974",
+    "commune_code": "97413",
+    "lat": -21.1662,
+    "lon": 55.2869,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/97413"
+  },
+  "elbeuf:76": {
+    "city": "Elbeuf",
+    "department": "76",
+    "commune_code": "76231",
+    "lat": 49.2921,
+    "lon": 1.0071,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/76231"
+  },
+  "epinal:88": {
+    "city": "Épinal",
+    "department": "88",
+    "commune_code": "88160",
+    "lat": 48.1754,
+    "lon": 6.4502,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/88160"
+  },
+  "bordeaux:33": {
+    "city": "Bordeaux",
+    "department": "33",
+    "commune_code": "33063",
+    "lat": 44.8379,
+    "lon": -0.5794,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/33063"
+  },
+  "dunkerque:59": {
+    "city": "Dunkerque",
+    "department": "59",
+    "commune_code": "59183",
+    "lat": 51.0377,
+    "lon": 2.3764,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/59183"
+  },
+  "mulhouse:68": {
+    "city": "Mulhouse",
+    "department": "68",
+    "commune_code": "68224",
+    "lat": 47.7505,
+    "lon": 7.336,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/68224"
+  },
+  "saintchamond:42": {
+    "city": "Saint-Chamond",
+    "department": "42",
+    "commune_code": "42207",
+    "lat": 45.4762,
+    "lon": 4.5127,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/42207"
+  },
+  "montargis:45": {
+    "city": "Montargis",
+    "department": "45",
+    "commune_code": "45208",
+    "lat": 47.998,
+    "lon": 2.7313,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/45208"
+  },
+  "venelles:13": {
+    "city": "Venelles",
+    "department": "13",
+    "commune_code": "13113",
+    "lat": 43.5982,
+    "lon": 5.4844,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/13113"
+  },
+  "clamart:92": {
+    "city": "Clamart",
+    "department": "92",
+    "commune_code": "92023",
+    "lat": 48.8007,
+    "lon": 2.2628,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/92023"
+  },
+  "lechesnay:78": {
+    "city": "Le Chesnay-Rocquencourt",
+    "department": "78",
+    "commune_code": "78158",
+    "lat": 48.8265,
+    "lon": 2.1253,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/78158"
+  },
+  "rillieuxlapape:69": {
+    "city": "Rillieux-la-Pape",
+    "department": "69",
+    "commune_code": "69286",
+    "lat": 45.8187,
+    "lon": 4.8978,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/69286"
+  },
+  "jouelestours:37": {
+    "city": "Joué-lès-Tours",
+    "department": "37",
+    "commune_code": "37122",
+    "lat": 47.3515,
+    "lon": 0.6623,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/37122"
+  },
+  "fontenaysousbois:94": {
+    "city": "Fontenay-sous-Bois",
+    "department": "94",
+    "commune_code": "94033",
+    "lat": 48.8489,
+    "lon": 2.4748,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/94033"
+  },
+  "loches:37": {
+    "city": "Loches",
+    "department": "37",
+    "commune_code": "37132",
+    "lat": 47.1281,
+    "lon": 0.9975,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/37132"
+  },
+  "massy:91": {
+    "city": "Massy",
+    "department": "91",
+    "commune_code": "91377",
+    "lat": 48.7309,
+    "lon": 2.2713,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/91377"
+  },
+  "reims:51": {
+    "city": "Reims",
+    "department": "51",
+    "commune_code": "51454",
+    "lat": 49.2583,
+    "lon": 4.0315,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/51454"
+  },
+  "montceaulesmines:71": {
+    "city": "Montceau-les-Mines",
+    "department": "71",
+    "commune_code": "71306",
+    "lat": 46.6741,
+    "lon": 4.363,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/71306"
+  },
+  "lelamentin:972": {
+    "city": "Le Lamentin",
+    "department": "972",
+    "commune_code": "97213",
+    "lat": 14.6154,
+    "lon": -61.0035,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/97213"
+  },
+  "agen:47": {
+    "city": "Agen",
+    "department": "47",
+    "commune_code": "47001",
+    "lat": 44.2031,
+    "lon": 0.6164,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/47001"
+  },
+  "saintetienne:42": {
+    "city": "Saint-Étienne",
+    "department": "42",
+    "commune_code": "42218",
+    "lat": 45.4402,
+    "lon": 4.3873,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/42218"
+  },
+  "sarrebourg:57": {
+    "city": "Sarrebourg",
+    "department": "57",
+    "commune_code": "57630",
+    "lat": 48.734,
+    "lon": 7.0564,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/57630"
+  },
+  "toulon:83": {
+    "city": "Toulon",
+    "department": "83",
+    "commune_code": "83137",
+    "lat": 43.1204,
+    "lon": 5.9325,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/83137"
+  },
+  "fresnes:94": {
+    "city": "Fresnes",
+    "department": "94",
+    "commune_code": "94034",
+    "lat": 48.7551,
+    "lon": 2.322,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/94034"
+  },
+  "vitre:35": {
+    "city": "Vitré",
+    "department": "35",
+    "commune_code": "35360",
+    "lat": 48.1247,
+    "lon": -1.2155,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/35360"
+  },
+  "noumea:988": {
+    "city": "Nouméa",
+    "department": "988",
+    "commune_code": "98818",
+    "lat": -22.3363,
+    "lon": 166.4076,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/98818"
+  },
+  "forbach:57": {
+    "city": "Forbach",
+    "department": "57",
+    "commune_code": "57227",
+    "lat": 49.1865,
+    "lon": 6.8954,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/57227"
+  },
+  "chateaubriant:44": {
+    "city": "Châteaubriant",
+    "department": "44",
+    "commune_code": "44036",
+    "lat": 47.7209,
+    "lon": -1.3761,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/44036"
+  },
+  "saintdiedesvosges:88": {
+    "city": "Saint-Dié-des-Vosges",
+    "department": "88",
+    "commune_code": "88413",
+    "lat": 48.2874,
+    "lon": 6.9478,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/88413"
+  },
+  "manosque:04": {
+    "city": "Manosque",
+    "department": "04",
+    "commune_code": "04112",
+    "lat": 43.8337,
+    "lon": 5.7823,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/04112"
+  },
+  "mennecy:91": {
+    "city": "Mennecy",
+    "department": "91",
+    "commune_code": "91386",
+    "lat": 48.5668,
+    "lon": 2.4345,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/91386"
+  },
+  "nimes:30": {
+    "city": "Nîmes",
+    "department": "30",
+    "commune_code": "30189",
+    "lat": 43.8367,
+    "lon": 4.3602,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/30189"
+  },
+  "saintraphael:83": {
+    "city": "Saint-Raphaël",
+    "department": "83",
+    "commune_code": "83118",
+    "lat": 43.4252,
+    "lon": 6.7684,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/83118"
+  },
+  "manteslajolie:78": {
+    "city": "Mantes-la-Jolie",
+    "department": "78",
+    "commune_code": "78361",
+    "lat": 48.9889,
+    "lon": 1.7153,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/78361"
+  },
+  "saintesprit:972": {
+    "city": "Saint-Esprit",
+    "department": "972",
+    "commune_code": "97223",
+    "lat": 14.5606,
+    "lon": -60.9372,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/97223"
+  },
+  "leport:974": {
+    "city": "Le Port",
+    "department": "974",
+    "commune_code": "97407",
+    "lat": -20.9353,
+    "lon": 55.2903,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/97407"
+  },
+  "besancon:25": {
+    "city": "Besançon",
+    "department": "25",
+    "commune_code": "25056",
+    "lat": 47.2377,
+    "lon": 6.0239,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/25056"
+  },
+  "melun:77": {
+    "city": "Melun",
+    "department": "77",
+    "commune_code": "77288",
+    "lat": 48.5398,
+    "lon": 2.6608,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/77288"
+  },
+  "grandcouronne:76": {
+    "city": "Grand-Couronne",
+    "department": "76",
+    "commune_code": "76319",
+    "lat": 49.3579,
+    "lon": 1.0081,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/76319"
+  },
+  "lesabymes:971": {
+    "city": "Les Abymes",
+    "department": "971",
+    "commune_code": "97101",
+    "lat": 16.2712,
+    "lon": -61.5053,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/97101"
+  },
+  "orange:84": {
+    "city": "Orange",
+    "department": "84",
+    "commune_code": "84087",
+    "lat": 44.1375,
+    "lon": 4.8072,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/84087"
+  },
+  "saintgermainenlaye:78": {
+    "city": "Saint-Germain-en-Laye",
+    "department": "78",
+    "commune_code": "78551",
+    "lat": 48.899,
+    "lon": 2.0938,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/78551"
+  },
+  "tours:37": {
+    "city": "Tours",
+    "department": "37",
+    "commune_code": "37261",
+    "lat": 47.3908,
+    "lon": 0.6894,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/37261"
+  },
+  "toulouse:31": {
+    "city": "Toulouse",
+    "department": "31",
+    "commune_code": "31555",
+    "lat": 43.6046,
+    "lon": 1.4442,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/31555"
+  },
+  "angouleme:16": {
+    "city": "Angoulême",
+    "department": "16",
+    "commune_code": "16015",
+    "lat": 45.6485,
+    "lon": 0.1561,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/16015"
+  },
+  "bastia:20": {
+    "city": "Bastia",
+    "department": "2B",
+    "commune_code": "2B033",
+    "lat": 42.7023,
+    "lon": 9.4519,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/2B033"
+  },
+  "strasbourg:67": {
+    "city": "Strasbourg",
+    "department": "67",
+    "commune_code": "67482",
+    "lat": 48.5734,
+    "lon": 7.752,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/67482"
+  },
+  "caen:14": {
+    "city": "Caen",
+    "department": "14",
+    "commune_code": "14118",
+    "lat": 49.1811,
+    "lon": -0.3731,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/14118"
+  },
+  "larochelle:17": {
+    "city": "La Rochelle",
+    "department": "17",
+    "commune_code": "17300",
+    "lat": 46.1596,
+    "lon": -1.1513,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/17300"
+  },
+  "corbeilessonnes:91": {
+    "city": "Corbeil-Essonnes",
+    "department": "91",
+    "commune_code": "91174",
+    "lat": 48.6139,
+    "lon": 2.4821,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/91174"
+  },
+  "saintjeandebraye:45": {
+    "city": "Saint-Jean-de-Braye",
+    "department": "45",
+    "commune_code": "45284",
+    "lat": 47.9121,
+    "lon": 1.9709,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/45284"
+  },
+  "marcqenbaroeul:59": {
+    "city": "Marcq-en-Barœul",
+    "department": "59",
+    "commune_code": "59378",
+    "lat": 50.6732,
+    "lon": 3.0936,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/59378"
+  },
+  "dunkerque:": {
+    "city": "Dunkerque",
+    "department": "59",
+    "commune_code": "59183",
+    "lat": 51.0377,
+    "lon": 2.3764,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/59183"
+  },
+  "huningue:68": {
+    "city": "Huningue",
+    "department": "68",
+    "commune_code": "68149",
+    "lat": 47.5941,
+    "lon": 7.5794,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/68149"
+  },
+  "lechesnayrocquencourt:78": {
+    "city": "Le Chesnay-Rocquencourt",
+    "department": "78",
+    "commune_code": "78158",
+    "lat": 48.8265,
+    "lon": 2.1253,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/78158"
+  },
+  "agen:": {
+    "city": "Agen",
+    "department": "47",
+    "commune_code": "47001",
+    "lat": 44.2031,
+    "lon": 0.6164,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/47001"
+  },
+  "besancon:": {
+    "city": "Besançon",
+    "department": "25",
+    "commune_code": "25056",
+    "lat": 47.2377,
+    "lon": 6.0239,
+    "verified_on": "2026-11-11",
+    "source_url": "https://geo.api.gouv.fr/communes/25056"
+  }
+}

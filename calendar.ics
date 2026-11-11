@@ -1,0 +1,1097 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Apnee Competitions//FR
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Apnée Compétitions France
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VEVENT
+UID:2026-10-11-beauvais-2e-open-d-apnee-de-b@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20261011
+DTEND;VALUE=DATE:20261012
+SUMMARY:2e Open d’Apnée de Beauvais
+LOCATION:Aquaspace\, Beauvais\, 60
+DESCRIPTION:Lieu : Aquaspace (bassin 25 m\, profondeur mini 1\,8 m). Épreu
+ ves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, Dynamique san
+ s palmes\, 8X25m.\nhttps://www.helloasso.com/associations/comite-departeme
+ ntal-de-l-oise-de-la-federation-francaise-d-etudes-et-de-sports-sous-marin
+ s/evenements/2e-open-d-apnee-de-beauvais
+URL:https://www.helloasso.com/associations/comite-departemental-de-l-oise-d
+ e-la-federation-francaise-d-etudes-et-de-sports-sous-marins/evenements/2e-
+ open-d-apnee-de-beauvais
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-01-saint-bel-aura-apnea-contest@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+SUMMARY:AURA APNEA CONTEST
+LOCATION:L'ARCHIPEL\, Sain-Bel\, 69
+DESCRIPTION:Lieu : L'ARCHIPEL (bassin 25 m\, profondeur mini 1\,8 m). Épre
+ uves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, Dynamique sa
+ ns palmes\, 8x25m.\nhttps://docs.google.com/spreadsheets/d/11O77uwZXXG3LFn
+ SzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-08-cherbourg-en-cotentin-open-d-apnee-de-cher@apnee-competition
+ s
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20261108
+DTEND;VALUE=DATE:20261109
+SUMMARY:Open d'Apnée de Cherbourg
+LOCATION:Piscine de Chantereyne\, Cherbourg-en-Cotentin\, 50
+DESCRIPTION:Lieu : Piscine de Chantereyne (bassin 25 m\, profondeur mini 1\
+ ,7 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, 
+ Dynamique sans palmes\, 16 x 25m en relais (équipe de 4).\nhttps://ffessm
+ -normandie.fr/w/apnee
+URL:https://ffessm-normandie.fr/w/apnee
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-08-saint-cyr-sur-loire-trophee-abyss@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20261108
+DTEND;VALUE=DATE:20261109
+SUMMARY:Trophée Abyss
+LOCATION:Watel\, Saint-Cyr-sur-Loire\, 37
+DESCRIPTION:Lieu : Watel (bassin 25 m\, profondeur mini 0\,8 m). Épreuves 
+ : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, Dynamique sans pa
+ lmes\, Relais. Accueil inclusif déclaré par l’organisateur.\nhttps://a
+ byss-plongee.vpdive.com/
+URL:https://abyss-plongee.vpdive.com/
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-11-marcq-en-bar-ul-competition-d-apnee-@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20261111
+DTEND;VALUE=DATE:20261112
+SUMMARY:Compétition d'apnée # 10 de Marcq en Baroeul
+LOCATION:Piscine Municipale de Marcq-en-Baroeul\, Marcq-en-Barœul\, 59
+DESCRIPTION:Lieu : Piscine Municipale de Marcq-en-Baroeul (bassin 25 m\, pr
+ ofondeur mini 2 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique
+  monopalme\, Dynamique sans palmes.\nhttps://docs.google.com/spreadsheets/
+ d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-14-le-kremlin-bicetre-trophee-camille-muff@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20261114
+DTEND;VALUE=DATE:20261115
+SUMMARY:Trophée Camille Muffat
+LOCATION:Camille Muffat\, Le Kremlin-Bicêtre\, 94
+DESCRIPTION:Lieu : Camille Muffat (bassin 25 m\, profondeur mini 1\,4 m). 
+ Épreuves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, Dynamiq
+ ue sans palmes. Accueil inclusif déclaré par l’organisateur.\nhttps://
+ docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKF
+ I/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-21-saint-leu-2eme-competition-d-a@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
+SUMMARY:2ème compétition d'apnée de Saint-Leu
+LOCATION:Philomène Trénoul\, Saint-Leu\, 974
+DESCRIPTION:Lieu : Philomène Trénoul (bassin 25 m\, profondeur mini 2\,5 
+ m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique sans palmes\, 4
+ x25m. Accueil inclusif déclaré par l’organisateur.\nhttps://www.ladila
+ pnee.re/page/3543153-competition
+URL:https://www.ladilapnee.re/page/3543153-competition
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-22-elbeuf-challenge-d-apnee-d-@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:Challenge d'Apnée d'Elbeuf
+LOCATION:Piscine de la Cerisaie\, Elbeuf\, 76
+DESCRIPTION:Lieu : Piscine de la Cerisaie (bassin 50 m\, profondeur mini 1\
+ ,6 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, 
+ Dynamique sans palmes\, 8x50m\, 4x50m\, 2x50m. Accueil inclusif déclaré 
+ par l’organisateur.\nhttps://ffessm-normandie.fr/
+URL:https://ffessm-normandie.fr/
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-28-epinal-premiere-manche-de-c@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261130
+SUMMARY:Première Manche de Coupe de France Apnée indoor
+LOCATION:Piscine olympique Pger Goujon\, Épinal\, 88
+DESCRIPTION:Lieu : Piscine olympique Pger Goujon (bassin 50 m\, profondeur 
+ mini 2 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique monopalm
+ e\, Dynamique sans palmes\, 8x50m\, 4x50m\, 2x50m.\nhttps://google.com/vie
+ w/epinal-apnee
+URL:https://google.com/view/epinal-apnee
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-29-bordeaux-trophee-bord-eau@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20261129
+DTEND;VALUE=DATE:20261130
+SUMMARY:Trophée Bord'eau
+LOCATION:Grand Parc\, Bordeaux\, 33
+DESCRIPTION:Lieu : Grand Parc (bassin 25 m\, profondeur mini 2 m). Épreuve
+ s : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, Dynamique sans 
+ palmes.\nhttps://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0
+ _j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-05-dunkerque-deuxieme-manche-de-c@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261206
+SUMMARY:Deuxième Manche de Coupe de France Apnée indoor
+LOCATION:Paul Asseman\, Dunkerque\, 59
+DESCRIPTION:Lieu : Paul Asseman (bassin 50 m\, profondeur mini 1\,8 m). Ép
+ reuves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, Dynamique 
+ sans palmes\, 8x50m\, 4x50m\, 2x50m.\nhttps://docs.google.com/spreadsheets
+ /d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-12-mulhouse-et-huningue-12eme-coupe-de-noel@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261213
+SUMMARY:12ème Coupe de Noël
+LOCATION:Illberg 50m\, Village-Neuf 25M\, Mulhouse et Huningue\, 68
+DESCRIPTION:Lieu : Illberg 50m\, Village-Neuf 25M (bassin 50 m\, profondeur
+  mini 1\,8 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique mono
+ palme\, Dynamique sans palmes\, 8x50m\, 4x50m. Accueil inclusif déclaré 
+ par l’organisateur.\nhttps://www.codep68.fr/
+URL:https://www.codep68.fr/
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-12-saint-chamond-open-42@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261213
+SUMMARY:OPEN 42
+LOCATION:Centre nautique Roger Couderc\, Saint-Chamond\, 42
+DESCRIPTION:Lieu : Centre nautique Roger Couderc (bassin 25 m\, profondeur 
+ mini 1\,8 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique sans 
+ palmes\, 8 x 25m ou 16 x 25m.\nhttps://docs.google.com/spreadsheets/d/11O7
+ 7uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-13-clamart-les-apnees-francilie@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261214
+SUMMARY:LES APNEES FRANCILIENNES DE CLAMART
+LOCATION:PISCINE DE CLAMART\, Clamart\, 92
+DESCRIPTION:Lieu : PISCINE DE CLAMART (bassin 25 m\, profondeur mini 2 m). 
+ Épreuves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, Dynamiq
+ ue sans palmes.\nhttps://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM
+ 2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-13-montargis-venise-du-gatinais@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261214
+SUMMARY:Venise du Gâtinais
+LOCATION:Piscine du Lac\, Montargis\, 45
+DESCRIPTION:Lieu : Piscine du Lac (bassin 25 m\, profondeur mini 2 m). Épr
+ euves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, Dynamique s
+ ans palmes.\nhttps://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2Bgt
+ K-T0_j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-13-venelles-championnat-departem@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261214
+SUMMARY:Championnat Départemental 13
+LOCATION:Venelles\, Venelles\, 13
+DESCRIPTION:Lieu : Venelles (bassin 25 m\, profondeur mini 2 m). Épreuves 
+ : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, Dynamique sans pa
+ lmes\, 4 x 25. Accueil inclusif déclaré par l’organisateur.\nhttps://d
+ ocs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI
+ /edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-10-le-chesnay-sub-galatee@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270110
+DTEND;VALUE=DATE:20270111
+SUMMARY:Sub Galatée
+LOCATION:Nouvelle  France\, Le Chesnay-Rocquencourt\, 78
+DESCRIPTION:Lieu : Nouvelle  France (bassin 50 m\, profondeur mini 1\,4 m).
+  Épreuves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, Dynami
+ que sans palmes.\nhttps://subgalatee.fr/
+URL:https://subgalatee.fr/
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-10-rillieux-la-pape-aura-apnea-contest-2@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270110
+DTEND;VALUE=DATE:20270111
+SUMMARY:Aura Apnea Contest 2027
+LOCATION:Origami\, Rillieux-la-Pape\, 69
+DESCRIPTION:Lieu : Origami (bassin 25 m\, profondeur mini 1\,8 m). Épreuve
+ s : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, Dynamique sans 
+ palmes.\nhttps://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0
+ _j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-13-joue-les-tours-defi-37-dnf@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270113
+DTEND;VALUE=DATE:20270114
+SUMMARY:DEFI 37 DNF
+LOCATION:Bulle d'O\, Joué-lès-Tours\, 37
+DESCRIPTION:Lieu : Bulle d'O (bassin 25 m\, profondeur mini 1\,2 m). Épreu
+ ves : Dynamique sans palmes. Accueil inclusif déclaré par l’organisate
+ ur.\nhttps://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5N
+ ZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-17-fontenay-sous-bois-apnee-fontenay-chall@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270117
+DTEND;VALUE=DATE:20270118
+SUMMARY:Apnée Fontenay Challenge
+LOCATION:Piscine Salvador Allende\, Fontenay-sous-Bois\, 94
+DESCRIPTION:Lieu : Piscine Salvador Allende (bassin 25 m\, profondeur mini 
+ 1\,8 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\
+ , Dynamique sans palmes.\nhttps://docs.google.com/spreadsheets/d/11O77uwZX
+ XG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-21-loches-defi-37-dyn@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270121
+DTEND;VALUE=DATE:20270122
+SUMMARY:DEFI 37 DYN
+LOCATION:NaturéO\, Loches\, 37
+DESCRIPTION:Lieu : NaturéO (bassin 25 m\, profondeur mini 2 m). Épreuves 
+ : Dynamique bi-palmes\, Dynamique monopalme. Accueil inclusif déclaré pa
+ r l’organisateur.\nhttps://docs.google.com/spreadsheets/d/11O77uwZXXG3LF
+ nSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-23-massy-troisieme-manche-de-@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270123
+DTEND;VALUE=DATE:20270125
+SUMMARY:Troisième Manche de Coupe de France Apnée indoor
+LOCATION:Centre Omnisport Pierre de Coubertin\, Massy\, 91
+DESCRIPTION:Lieu : Centre Omnisport Pierre de Coubertin (bassin 50 m\, prof
+ ondeur mini 1\,4 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamiqu
+ e monopalme\, Dynamique sans palmes\, 8x50m\, 4x50m\, 2x50m.\nhttps://docs
+ .google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/ed
+ it?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:3
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-23-saint-cyr-sur-loire-defi-37-sta@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270123
+DTEND;VALUE=DATE:20270124
+SUMMARY:DEFI 37 STA
+LOCATION:PIscine Ernest Watel\, Saint-Cyr-sur-Loire\, 37
+DESCRIPTION:Lieu : PIscine Ernest Watel (bassin 25 m\, profondeur mini 0\,8
+  m). Épreuves : Statique. Accueil inclusif déclaré par l’organisateur
+ .\nhttps://abyss-plongee.vpdive.com/app/club/apnee
+URL:https://abyss-plongee.vpdive.com/app/club/apnee
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-24-montceau-les-mines-bfc-competition-regi@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270124
+DTEND;VALUE=DATE:20270125
+SUMMARY:BFC COMPETITION REGIONALE MONTCEAU
+LOCATION:CENTRE NAUTIQUE DE MONTCEAU LES MINES\, Montceau-les-Mines\, 71
+DESCRIPTION:Lieu : CENTRE NAUTIQUE DE MONTCEAU LES MINES (bassin 50 m\, pro
+ fondeur mini 1\,2 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamiq
+ ue monopalme\, Dynamique sans palmes\, 4x50m.\nhttps://docs.google.com/spr
+ eadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-24-reims-13eme-coupe-des-sacr@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270124
+DTEND;VALUE=DATE:20270125
+SUMMARY:13ème Coupe des Sacres
+LOCATION:Piscine des Thiolettes\, Reims\, 51
+DESCRIPTION:Lieu : Piscine des Thiolettes (bassin 25 m\, profondeur mini 1\
+ ,8 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, 
+ Dynamique sans palmes\, 8X25m.\nhttps://reims-palmes-apnee.fr/w/accueil-2
+URL:https://reims-palmes-apnee.fr/w/accueil-2
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-27-le-lamentin-madinina-static-cup@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270127
+DTEND;VALUE=DATE:20270128
+SUMMARY:Madinina Static Cup
+LOCATION:CENTRE AQUATIQUE COMMUNAUTAIRE DU LAMENTIN\, Le Lamentin\, 972
+DESCRIPTION:Lieu : CENTRE AQUATIQUE COMMUNAUTAIRE DU LAMENTIN (bassin 25 m\
+ , profondeur mini 0\,8 m). Épreuves : Statique. Accueil inclusif déclar
+ é par l’organisateur.\nhttps://docs.google.com/spreadsheets/d/11O77uwZX
+ XG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-30-agen-quatrieme-manche-de-@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270130
+DTEND;VALUE=DATE:20270131
+SUMMARY:Quatrième Manche de Coupe de France Apnée indoor
+LOCATION:Aquasud\, Agen\, 47
+DESCRIPTION:Lieu : Aquasud (bassin 50 m\, profondeur mini 2\,2 m). Épreuve
+ s : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, Dynamique sans 
+ palmes\, 8x50m\, 4x50m\, 2x50m. Accueil inclusif déclaré par l’organis
+ ateur.\nhttps://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_
+ j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-31-saint-etienne-saint-etienne-apnee-@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270131
+DTEND;VALUE=DATE:20270201
+SUMMARY:Saint-Etienne Apnée Challenge 2027
+LOCATION:PISCINE Raymond SOMMET\, Saint-Étienne\, 42
+DESCRIPTION:Lieu : PISCINE Raymond SOMMET (bassin 50 m\, profondeur mini 2 
+ m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, Dyn
+ amique sans palmes\, 4x50m\, 2x50m.\nhttps://www.cspsm.fr/saint-etienne-ap
+ nee-challenge-2027/
+URL:https://www.cspsm.fr/saint-etienne-apnee-challenge-2027/
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-31-sarrebourg-coupe-des-furies@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270131
+DTEND;VALUE=DATE:20270201
+SUMMARY:Coupe des Furies
+LOCATION:Centre aquatique de SARREBOURG\, Sarrebourg\, 57
+DESCRIPTION:Lieu : Centre aquatique de SARREBOURG (bassin 25 m\, profondeur
+  mini 1\,8 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique mono
+ palme\, Dynamique sans palmes\, 16x25m.\nhttps://docs.google.com/spreadshe
+ ets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-31-toulon-competition-d-apnee-@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270131
+DTEND;VALUE=DATE:20270201
+SUMMARY:Compétition d’apnée Toulon
+LOCATION:Léo Lagrange\, Toulon\, 83
+DESCRIPTION:Lieu : Léo Lagrange (bassin 25 m\, profondeur mini 1\,2 m). É
+ preuves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, Dynamique
+  sans palmes.\nhttps://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2B
+ gtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-07-fresnes-valdemarnaise-d-apne@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270207
+DTEND;VALUE=DATE:20270208
+SUMMARY:Valdemarnaise d'apnée
+LOCATION:Fresnes\, Fresnes\, 94
+DESCRIPTION:Lieu : Fresnes (bassin 25 m\, profondeur mini 2 m). Épreuves :
+  Statique\, Dynamique bi-palmes\, Dynamique monopalme\, Dynamique sans pal
+ mes.\nhttps://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5
+ NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-07-vitre-cvas-apnee-contest@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270207
+DTEND;VALUE=DATE:20270208
+SUMMARY:CVAS Apnée Contest
+LOCATION:Piscine du bocage Vitréen\, Vitré\, 35
+DESCRIPTION:Lieu : Piscine du bocage Vitréen (bassin 25 m\, profondeur min
+ i 1 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\,
+  Dynamique sans palmes\, 8x25m.\nhttps://www.facebook.com/profile.php?id=6
+ 1573543289676&sk=about_details
+URL:https://www.facebook.com/profile.php?id=61573543289676&sk=about_details
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-10-le-lamentin-madinina-winter-cup@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270210
+DTEND;VALUE=DATE:20270211
+SUMMARY:Madinina Winter Cup
+LOCATION:CENTRE AQUATIQUE COMMUNAUTAIRE DU LAMENTIN\, Le Lamentin\, 972
+DESCRIPTION:Lieu : CENTRE AQUATIQUE COMMUNAUTAIRE DU LAMENTIN (bassin 25 m\
+ , profondeur mini 0\,8 m). Épreuves : Statique\, Dynamique bi-palmes\, Dy
+ namique monopalme\, Dynamique sans palmes. Accueil inclusif déclaré par 
+ l’organisateur.\nhttps://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnS
+ zM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-12-noumea-challenge-apnea-2027@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270212
+DTEND;VALUE=DATE:20270214
+SUMMARY:Challenge Apnéa 2027
+LOCATION:Jacques Mouren Ouen Toro\, Nouméa\, 988
+DESCRIPTION:Lieu : Jacques Mouren Ouen Toro (bassin 50 m\, profondeur mini 
+ 1\,9 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\
+ , Dynamique sans palmes.\nhttps://docs.google.com/spreadsheets/d/11O77uwZX
+ XG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-14-forbach-coupe-donald-chrosci@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270214
+DTEND;VALUE=DATE:20270215
+SUMMARY:Coupe Donald CHROSCIANY
+LOCATION:Piscine olympique Jean-Eric Bousch\, Forbach\, 57
+DESCRIPTION:Lieu : Piscine olympique Jean-Eric Bousch (bassin 50 m\, profon
+ deur mini 2 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique mon
+ opalme\, Dynamique sans palmes\, 4x50m.\nhttps://scaf-forbach.vpdive.com/
+URL:https://scaf-forbach.vpdive.com/
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-19-noumea-challenge-apnea-2027@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270219
+DTEND;VALUE=DATE:20270221
+SUMMARY:Challenge Apnéa 2027
+LOCATION:Jacques Mouren Ouen Toro\, Nouméa\, 988
+DESCRIPTION:Lieu : Jacques Mouren Ouen Toro (bassin 50 m\, profondeur mini 
+ 1\,9 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\
+ , Dynamique sans palmes.\nhttps://docs.google.com/spreadsheets/d/11O77uwZX
+ XG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-21-chateaubriant-competition-regional@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270221
+DTEND;VALUE=DATE:20270222
+SUMMARY:Compétition Régionale Apnée - Pays-de-la-Loire
+LOCATION:Espace Dauphins\, Châteaubriant\, 44
+DESCRIPTION:Lieu : Espace Dauphins (bassin 50 m\, profondeur mini 1\,2 m). 
+ Épreuves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, Dynamiq
+ ue sans palmes\, normalement toutes les épreuves de sprint mais à voir n
+ iveau planning. Accueil inclusif déclaré par l’organisateur.\nhttps://
+ www.facebook.com/profile.php?id=61566427601162
+URL:https://www.facebook.com/profile.php?id=61566427601162
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-26-noumea-challenge-apnea@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270226
+DTEND;VALUE=DATE:20270228
+SUMMARY:Challenge Apnéa
+LOCATION:Jacques Mouren (Ouen Toro)\, Nouméa\, 988
+DESCRIPTION:Lieu : Jacques Mouren (Ouen Toro) (bassin 50 m\, profondeur min
+ i 1\,9 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique monopalm
+ e\, Dynamique sans palmes.\nhttps://docs.google.com/spreadsheets/d/11O77uw
+ ZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-27-manosque-competition-apnee-ma@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270227
+DTEND;VALUE=DATE:20270228
+SUMMARY:Compétition apnée Manosque
+LOCATION:L'O-Vive\, Manosque\, 04
+DESCRIPTION:Lieu : L'O-Vive (bassin 25 m\, profondeur mini 2 m). Épreuves 
+ : Statique\, Dynamique bi-palmes\, Dynamique sans palmes\, 16x25m.\nhttps:
+ //docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2vo
+ KFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-27-saint-die-des-vosges-americ-apnee@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270227
+DTEND;VALUE=DATE:20270228
+SUMMARY:Americ'Apnée
+LOCATION:Aquanova\, Saint-Dié-des-Vosges\, 88
+DESCRIPTION:Lieu : Aquanova (bassin 25 m\, profondeur mini 2 m). Épreuves 
+ : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, Dynamique sans pa
+ lmes. Accueil inclusif déclaré par l’organisateur.\nhttps://docs.googl
+ e.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp
+ =sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-28-mennecy-1er-defi-d-apnee-orq@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:1er défi d'apnée Orquoise
+LOCATION:Aquastade\, Mennecy\, 91
+DESCRIPTION:Lieu : Aquastade (bassin 50 m\, profondeur mini 1\,8 m). Épreu
+ ves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, Dynamique san
+ s palmes\, 4x50m. Accueil inclusif déclaré par l’organisateur.\nhttps:
+ //www.orquoise.org/
+URL:https://www.orquoise.org/
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-28-nimes-coupe-des-plongeurs-@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:Coupe des Plongeurs Libres 2027
+LOCATION:Stade nautique NEMAUSA\, Nîmes\, 30
+DESCRIPTION:Lieu : Stade nautique NEMAUSA (bassin 50 m\, profondeur mini 2\
+ ,5 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, 
+ Dynamique sans palmes.\nhttps://scpl-nimes.com/
+URL:https://scpl-nimes.com/
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-28-saint-raphael-competition-d-apnee-@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:Compétition d'apnée de Saint-Raphaël
+LOCATION:Stade nautique Alain Chateigner\, Saint-Raphaël\, 83
+DESCRIPTION:Lieu : Stade nautique Alain Chateigner (bassin 50 m\, profondeu
+ r mini 2 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique monopa
+ lme\, Dynamique sans palmes\, 8x50m\, 4x50m\, 2x50m.\nhttps://docs.google.
+ com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=s
+ haring
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-05-noumea-challenge-d-ete-apne@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270305
+DTEND;VALUE=DATE:20270307
+SUMMARY:Challenge d'été Apnéa 2027
+LOCATION:Jacques Mouren Ouen Toro\, Nouméa\, 988
+DESCRIPTION:Lieu : Jacques Mouren Ouen Toro (bassin 50 m\, profondeur mini 
+ 1\,9 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\
+ , Dynamique sans palmes.\nhttps://docs.google.com/spreadsheets/d/11O77uwZX
+ XG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-06-le-port-championnat-regional@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270306
+DTEND;VALUE=DATE:20270307
+SUMMARY:Championnat régional d'apnée de la Réunion 2027
+LOCATION:Jean-Lou Javoy\, Le Port\, 974
+DESCRIPTION:Lieu : Jean-Lou Javoy (bassin 50 m\, profondeur mini 1\,2 m). 
+ Épreuves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, Dynamiq
+ ue sans palmes\, 2x50m. Accueil inclusif déclaré par l’organisateur.\n
+ https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz3
+ 2tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-06-mantes-la-jolie-10eme-meeting-de-man@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270306
+DTEND;VALUE=DATE:20270307
+SUMMARY:10ème Meeting de Mantes en Yvelines
+LOCATION:Aquasport\, Mantes-la-Jolie\, 78
+DESCRIPTION:Lieu : Aquasport (bassin 25 m\, profondeur mini 2 m). Épreuves
+  : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, Dynamique sans p
+ almes.\nhttps://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_
+ j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-06-saint-esprit-championnat-inter-re@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270306
+DTEND;VALUE=DATE:20270307
+SUMMARY:Championnat inter-regional Antilles-Guyane
+LOCATION:Piscine communautaire du Saint-Esprit\, Saint-Esprit\, 972
+DESCRIPTION:Lieu : Piscine communautaire du Saint-Esprit (bassin 25 m\, pro
+ fondeur mini 1 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique 
+ monopalme\, Dynamique sans palmes. Accueil inclusif déclaré par l’orga
+ nisateur.\nhttps://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-
+ T0_j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-13-besancon-cinquieme-manche-de-@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270313
+DTEND;VALUE=DATE:20270314
+SUMMARY:Cinquième Manche de Coupe de France Apnée indoor
+LOCATION:Mallarmé\, Besançon\, 25
+DESCRIPTION:Lieu : Mallarmé (bassin 50 m\, profondeur mini 1\,2 m). Épreu
+ ves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, Dynamique san
+ s palmes\, 8x50m\, 4x50m\, 2x50m. Accueil inclusif déclaré par l’organ
+ isateur.\nhttps://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T
+ 0_j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-14-grand-couronne-championnat-de-norma@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270314
+DTEND;VALUE=DATE:20270315
+SUMMARY:Championnat de Normandie d'Apnée
+LOCATION:Centre Aquatique Alex Jany\, Grand-Couronne\, 76
+DESCRIPTION:Lieu : Centre Aquatique Alex Jany (bassin 50 m\, profondeur min
+ i 1\,4 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique monopalm
+ e\, Dynamique sans palmes\, 8x50m\, 4x50m\, 2x50m.\nhttps://ffessm-normand
+ ie.fr/
+URL:https://ffessm-normandie.fr/
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-14-melun-melunaise-d-apnee-tr@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270314
+DTEND;VALUE=DATE:20270315
+SUMMARY:Melunaise d'Apnée Trophée Alain Bertoncello
+LOCATION:piscine municipale Laure Manaudou\, Melun\, 77
+DESCRIPTION:Lieu : piscine municipale Laure Manaudou (bassin 25 m\, profond
+ eur mini 2\,1 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique m
+ onopalme\, Dynamique sans palmes. Accueil inclusif déclaré par l’organ
+ isateur.\nhttps://www.usmplongee.org/
+URL:https://www.usmplongee.org/
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-19-noumea-championnat-regional@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270319
+DTEND;VALUE=DATE:20270321
+SUMMARY:Championnat Régional FFESSM Nouvelle-Calédonie 2027
+LOCATION:Jacques Mouren Ouen Toro\, Nouméa\, 988
+DESCRIPTION:Lieu : Jacques Mouren Ouen Toro (bassin 50 m\, profondeur mini 
+ 1\,9 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\
+ , Dynamique sans palmes.\nhttps://docs.google.com/spreadsheets/d/11O77uwZX
+ XG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-20-nimes-les-trophees-gardois@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270320
+DTEND;VALUE=DATE:20270321
+SUMMARY:Les Trophées Gardois Acte 5
+LOCATION:Stade Nautique de Némausa\, Nîmes\, 30
+DESCRIPTION:Lieu : Stade Nautique de Némausa (bassin 50 m\, profondeur min
+ i 2 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\,
+  Dynamique sans palmes\, 4x50m. Accueil inclusif déclaré par l’organis
+ ateur.\nhttps://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_
+ j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-21-les-abymes-7eme-trophee-de-citr@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270321
+DTEND;VALUE=DATE:20270322
+SUMMARY:7ème Trophée de Citron Bleu
+LOCATION:Piscine intercommunale des Abymes\, Les Abymes\, 971
+DESCRIPTION:Lieu : Piscine intercommunale des Abymes (bassin 25 m\, profond
+ eur mini 1\,8 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique m
+ onopalme\, Dynamique sans palmes.\nhttps://docs.google.com/spreadsheets/d/
+ 11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-21-orange-trophee-orca@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270321
+DTEND;VALUE=DATE:20270322
+SUMMARY:Trophée ORCA
+LOCATION:Piscine l'Attente\, Orange\, 84
+DESCRIPTION:Lieu : Piscine l'Attente (bassin 25 m\, profondeur mini 0\,85 m
+ ). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, Dyna
+ mique sans palmes.\nhttps://docs.google.com/spreadsheets/d/11O77uwZXXG3LFn
+ SzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-21-saint-germain-en-laye-royale-du-dome@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270321
+DTEND;VALUE=DATE:20270322
+SUMMARY:Royale du Dôme
+LOCATION:Le Dôme\, Saint-Germain-en-Laye\, 78
+DESCRIPTION:Lieu : Le Dôme (bassin 50 m\, profondeur mini 1\,5 m). Épreuv
+ es : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, Dynamique sans
+  palmes\, 8x50m\, 4x50m\, 2x50m.\nhttps://docs.google.com/spreadsheets/d/1
+ 1O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-26-noumea-championnat-regional@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270326
+DTEND;VALUE=DATE:20270328
+SUMMARY:Championnat Régional FFESSM Nouvelle-Calédonie 2027
+LOCATION:Jacques Mouren Ouen Toro\, Nouméa\, 988
+DESCRIPTION:Lieu : Jacques Mouren Ouen Toro (bassin 50 m\, profondeur mini 
+ 1\,9 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\
+ , Dynamique sans palmes.\nhttps://docs.google.com/spreadsheets/d/11O77uwZX
+ XG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-28-nice-competition-regional@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270328
+DTEND;VALUE=DATE:20270329
+SUMMARY:Compétition Régionale Sud
+LOCATION:Piscine Jean Bouin\, Nice\, 06
+DESCRIPTION:Lieu : Piscine Jean Bouin (bassin 50 m\, profondeur mini 1\,8 m
+ ). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, Dyna
+ mique sans palmes\, 2x50m.\nhttps://docs.google.com/spreadsheets/d/11O77uw
+ ZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-28-tours-championnat-regional@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270328
+DTEND;VALUE=DATE:20270329
+SUMMARY:Championnat régionale Centre-Val de Loire
+LOCATION:Piscine Municipale Gilbert Bozon\, Tours\, 37
+DESCRIPTION:Lieu : Piscine Municipale Gilbert Bozon (bassin 50 m\, profonde
+ ur mini 1\,2 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique mo
+ nopalme\, Dynamique sans palmes\, 4x50m\, 2x50m. Accueil inclusif déclar
+ é par l’organisateur.\nhttps://centreffessm.fr/commission-apnee/
+URL:https://centreffessm.fr/commission-apnee/
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-02-noumea-championnat-regional@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270402
+DTEND;VALUE=DATE:20270403
+SUMMARY:Championnat Régional de Nouvelle-Calédonie
+LOCATION:Jacques Mouren (Ouen Toro)\, Nouméa\, 988
+DESCRIPTION:Lieu : Jacques Mouren (Ouen Toro) (bassin 50 m\, profondeur min
+ i 1\,9 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique monopalm
+ e\, Dynamique sans palmes.\nLes dates du commentaire ne correspondent pas 
+ à la date de début déclarée.\nhttps://www.ffessm-nc.nc/apnee/
+URL:https://www.ffessm-nc.nc/apnee/
+STATUS:TENTATIVE
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-03-angouleme-charente-apnea-conte@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270403
+DTEND;VALUE=DATE:20270405
+SUMMARY:Charente Apnea Contest
+LOCATION:Nautilis\, Angoulême\, 16
+DESCRIPTION:Lieu : Nautilis (bassin 50 m\, profondeur mini 1 m). Épreuves 
+ : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, Dynamique sans pa
+ lmes\, 8x50m\, 4x50m\, 2x50m.\nhttps://charenteapneacontest.wordpress.com/
+URL:https://charenteapneacontest.wordpress.com/
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-03-toulouse-tolosapnea@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270403
+DTEND;VALUE=DATE:20270405
+SUMMARY:TOLOSAPNEA
+LOCATION:Léo Lagrange\, Toulouse\, 31
+DESCRIPTION:Lieu : Léo Lagrange (bassin 50 m\, profondeur mini 1\,2 m). É
+ preuves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, Dynamique
+  sans palmes\, 8x50m\, 4x50m\, 2x50m\, épreuves de NAP.\nhttps://immersio
+ nlibre.com/tolosapnea/
+URL:https://immersionlibre.com/tolosapnea/
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-04-bastia-crac-6-championnat-r@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270404
+DTEND;VALUE=DATE:20270405
+SUMMARY:CRAC 6 (Championnat Régional Apnée Corse 6 eme édition)
+LOCATION:Carbonite\, Bastia\, 2B
+DESCRIPTION:Lieu : Carbonite (bassin 25 m\, profondeur mini 2\,1 m). Épreu
+ ves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, Dynamique san
+ s palmes\, 16x25 m.\nhttps://docs.google.com/spreadsheets/d/11O77uwZXXG3LF
+ nSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-04-caen-competition-inter-re@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270404
+DTEND;VALUE=DATE:20270405
+SUMMARY:Compétition Inter-régionale Normandie Bretagne Pays de Loire
+LOCATION:Piscine du Chemin Vert\, Caen\, 14
+DESCRIPTION:Lieu : Piscine du Chemin Vert (bassin 25 m\, profondeur mini 1\
+ ,8 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, 
+ Dynamique sans palmes\, 8x25m.\nhttps://ffessm-normandie.fr/
+URL:https://ffessm-normandie.fr/
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-04-la-rochelle-competition-apnee-la@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270404
+DTEND;VALUE=DATE:20270405
+SUMMARY:Compétition apnée La Rochelle
+LOCATION:Lucien Maylin\, La Rochelle\, 17
+DESCRIPTION:Lieu : Lucien Maylin (bassin 50 m\, profondeur mini 1\,3 m). É
+ preuves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, Dynamique
+  sans palmes\, 8x50m\, 4x50m\, 2x50m.\nhttps://docs.google.com/spreadsheet
+ s/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-04-strasbourg-coupe-euro-apnee@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270404
+DTEND;VALUE=DATE:20270405
+SUMMARY:Coupe Euro-apnée
+LOCATION:Centre nautique de Schiltigheim\, Strasbourg\, 67
+DESCRIPTION:Lieu : Centre nautique de Schiltigheim (bassin 50 m\, profondeu
+ r mini 1\,3 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique mon
+ opalme\, Dynamique sans palmes\, 8x50m\, 4x50m. Accueil inclusif déclaré
+  par l’organisateur.\nhttps://docs.google.com/spreadsheets/d/11O77uwZXXG
+ 3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-17-mulhouse-15eme-coupe-des-corm@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270417
+DTEND;VALUE=DATE:20270418
+SUMMARY:15ème Coupe des Cormorans
+LOCATION:Illberg et Bourtzwiller\, Mulhouse\, 68
+DESCRIPTION:Lieu : Illberg et Bourtzwiller (bassin 50 m\, profondeur mini 1
+ \,8 m). Épreuves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\,
+  Dynamique sans palmes\, 8x50m.\nhttps://www.codep68.fr/
+URL:https://www.codep68.fr/
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-25-corbeil-essonnes-challenge-91-ed5@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270425
+DTEND;VALUE=DATE:20270426
+SUMMARY:Challenge 91 Ed5
+LOCATION:Stade Nautique Gabriel-Menut\, Corbeil-Essonnes\, 91
+DESCRIPTION:Lieu : Stade Nautique Gabriel-Menut (bassin 50 m\, profondeur m
+ ini 2 m). Épreuves : voir règlement spécifique au Challenge épreuves e
+ n individuel et par équipe..\nhttps://docs.google.com/spreadsheets/d/11O7
+ 7uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-25-trophee-canneson@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270425
+DTEND;VALUE=DATE:20270426
+SUMMARY:Trophée Canneson
+LOCATION:78
+DESCRIPTION:Date annoncée par la Commission Apnée FFESSM Île-de-France. 
+ Lieu et inscriptions à confirmer.\nCommune et lieu précis non indiqués 
+ dans cette annonce officielle.\nhttps://ffessm-idf.fr/liste-des-commission
+ s/apnee/
+URL:https://ffessm-idf.fr/liste-des-commissions/apnee/
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-06-06-saint-jean-de-braye-championnat-departem@apnee-competitions
+DTSTAMP:20261111T135532Z
+DTSTART;VALUE=DATE:20270606
+DTEND;VALUE=DATE:20270607
+SUMMARY:Championnat Départemental d'Apnée du Loiret
+LOCATION:L’Õbraysie\, Saint-Jean-de-Braye\, 45
+DESCRIPTION:Lieu : L’Õbraysie (bassin 25 m\, profondeur mini 1\,2 m). É
+ preuves : Statique\, Dynamique bi-palmes\, Dynamique monopalme\, Dynamique
+  sans palmes\, 4x25m. Accueil inclusif déclaré par l’organisateur.\nht
+ tps://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32t
+ x2voKFI/edit?usp=sharing
+URL:https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZC
+ qz32tx2voKFI/edit?usp=sharing
+STATUS:CONFIRMED
+SEQUENCE:2
+END:VEVENT
+END:VCALENDAR
