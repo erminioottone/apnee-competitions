@@ -1,0 +1,34 @@
+{
+  "generated_at": "2026-11-11T13:55:32.079Z",
+  "items": [
+    {
+      "event_id": "2027-04-02-noumea-championnat-regional",
+      "name": "Championnat Régional de Nouvelle-Calédonie",
+      "source_id": "ffessm-declarations",
+      "message": "Les dates du commentaire ne correspondent pas à la date de début déclarée.",
+      "source_url": "https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing"
+    },
+    {
+      "source_id": "cna-gestion",
+      "message": "Source modifiée : vérifier les annonces non structurées puis acquitter son empreinte dans data/config.json.",
+      "source_url": "https://g-competitions-cna.fr/"
+    },
+    {
+      "source_id": "cr-idf",
+      "message": "Source modifiée : vérifier les annonces non structurées puis acquitter son empreinte dans data/config.json.",
+      "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/"
+    },
+    {
+      "source_id": "cr-centre",
+      "message": "Source modifiée : vérifier les annonces non structurées puis acquitter son empreinte dans data/config.json.",
+      "source_url": "https://centreffessm.fr/actualites/apnee/apnee-calendrier-des-competitions-2026-2027/"
+    },
+    {
+      "event_id": "2027-04-25-trophee-canneson",
+      "name": "Trophée Canneson",
+      "source_id": "cr-idf",
+      "message": "Commune et lieu précis non indiqués dans cette annonce officielle.",
+      "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/"
+    }
+  ]
+}
