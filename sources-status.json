@@ -1,12 +1,12 @@
 {
-  "last_run": "2026-11-12T15:06:39.872Z",
+  "last_run": "2026-11-12T23:34:18.227Z",
   "sources": {
     "ffessm-declarations": {
       "algorithm": "semantic-assets-v2",
       "url": "https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/gviz/tq?tqx=out:csv",
       "status": 200,
-      "checked_at": "2026-11-12T15:06:39.872Z",
-      "last_success": "2026-11-12T15:06:39.872Z",
+      "checked_at": "2026-11-12T23:34:18.227Z",
+      "last_success": "2026-11-12T23:34:18.227Z",
       "hash": "6b7f41b0e8dc0b3660130a0059008a6224f8b639357756de10a961c170e40133",
       "changed": false,
       "reviewed_hash": "6b7f41b0e8dc0b3660130a0059008a6224f8b639357756de10a961c170e40133",
@@ -16,8 +16,8 @@
       "algorithm": "semantic-assets-v2",
       "url": "https://apnee.ffessm.fr/calendrier-saison-sportive",
       "status": 200,
-      "checked_at": "2026-11-12T15:06:39.872Z",
-      "last_success": "2026-11-12T15:06:39.872Z",
+      "checked_at": "2026-11-12T23:34:18.227Z",
+      "last_success": "2026-11-12T23:34:18.227Z",
       "hash": "83a2b1acb12b7c209ec31a8418b0c7b733a131667d483a15e3caa70796372d4d",
       "changed": false,
       "reviewed_hash": "7c8ed881750eff7ad843ac76a94bd0f272160c6c0430201a54a6269600083d7d",
@@ -27,10 +27,10 @@
       "algorithm": "semantic-assets-v2",
       "url": "https://g-competitions-cna.fr/",
       "status": 200,
-      "checked_at": "2026-11-12T15:06:39.872Z",
-      "last_success": "2026-11-12T15:06:39.872Z",
-      "hash": "dc0c5af0db033ef613b7b0ed4677b80811d44c55016948ebe9f39c6fc6309504",
-      "changed": false,
+      "checked_at": "2026-11-12T23:34:18.227Z",
+      "last_success": "2026-11-12T23:34:18.227Z",
+      "hash": "05b917468760e70d4d77c17105d042d71c30bfa3ef6e26404788283e03b4b33f",
+      "changed": true,
       "reviewed_hash": null,
       "needs_review": true
     },
@@ -38,8 +38,8 @@
       "algorithm": "semantic-assets-v2",
       "url": "https://ffessm-idf.fr/liste-des-commissions/apnee/",
       "status": 200,
-      "checked_at": "2026-11-12T15:06:39.872Z",
-      "last_success": "2026-11-12T15:06:39.872Z",
+      "checked_at": "2026-11-12T23:34:18.227Z",
+      "last_success": "2026-11-12T23:34:18.227Z",
       "hash": "b43f006f88f8380bed05befc35d73732a96efc5090f0149960b4f365b9f63622",
       "changed": false,
       "reviewed_hash": null,
@@ -48,20 +48,21 @@
     "cr-centre": {
       "algorithm": "semantic-assets-v2",
       "url": "https://centreffessm.fr/actualites/apnee/apnee-calendrier-des-competitions-2026-2027/",
-      "status": 200,
-      "checked_at": "2026-11-12T15:06:39.872Z",
+      "status": 0,
+      "checked_at": "2026-11-12T23:34:18.227Z",
       "last_success": "2026-11-12T15:06:39.872Z",
       "hash": "d62902905366cca3dfb4ab3b1d54b7b6a30dd1e78bafbf19c822ae9215c909ee",
       "changed": false,
       "reviewed_hash": null,
-      "needs_review": true
+      "needs_review": true,
+      "error": "The operation was aborted due to timeout"
     },
     "cd95": {
       "algorithm": "semantic-assets-v2",
       "url": "https://www.ffessm95.fr/2026/09/28/apnee-2026-2027-formations-competitions/",
       "status": 200,
-      "checked_at": "2026-11-12T15:06:39.872Z",
-      "last_success": "2026-11-12T15:06:39.872Z",
+      "checked_at": "2026-11-12T23:34:18.227Z",
+      "last_success": "2026-11-12T23:34:18.227Z",
       "hash": "cee70bead7756f6f659ca38a7ac561a046734c537ba8847a2dda3989f5c0e5d8",
       "changed": false,
       "reviewed_hash": "1b2ea1ba2a359601ab7bb3a49023210c685930efa6054f1d8409556ab9fe2dc4",
@@ -71,8 +72,8 @@
       "algorithm": "semantic-assets-v2",
       "url": "https://aidafrance.fr/actualites/",
       "status": 200,
-      "checked_at": "2026-11-12T15:06:39.872Z",
-      "last_success": "2026-11-12T15:06:39.872Z",
+      "checked_at": "2026-11-12T23:34:18.227Z",
+      "last_success": "2026-11-12T23:34:18.227Z",
       "hash": "cfe2a39eb8487ae09b35764e38f869be8e1f1a54ec1ceed4752b36bf867d4f5f",
       "changed": false,
       "reviewed_hash": "1268d0c86d71828bd4bbf723f38b2be166ffb40f0822cdfa2d1ac94cde437852",
@@ -84,6 +85,6 @@
     "error": null,
     "event_count": 72,
     "changes": 0,
-    "review_count": 5
+    "review_count": 6
   }
 }
