@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T23:34:18.227Z",
+  "generated_at": "2026-11-13T06:36:56.168Z",
   "items": [
     {
       "event_id": "2027-04-02-noumea-championnat-regional",
@@ -17,11 +17,6 @@
       "source_id": "cr-idf",
       "message": "Source modifiée : vérifier les annonces non structurées puis acquitter son empreinte dans data/config.json.",
       "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/"
-    },
-    {
-      "source_id": "cr-centre",
-      "message": "Échec de vérification : The operation was aborted due to timeout",
-      "source_url": "https://centreffessm.fr/actualites/apnee/apnee-calendrier-des-competitions-2026-2027/"
     },
     {
       "source_id": "cr-centre",
