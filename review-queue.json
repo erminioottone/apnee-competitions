@@ -1,12 +1,10 @@
 {
-  "generated_at": "2026-11-17T07:49:46.465Z",
+  "generated_at": "2026-11-17T20:51:15.725Z",
   "items": [
     {
-      "event_id": "2027-04-02-noumea-championnat-regional",
-      "name": "Championnat Régional de Nouvelle-Calédonie",
       "source_id": "ffessm-declarations",
-      "message": "Les dates du commentaire ne correspondent pas à la date de début déclarée.",
-      "source_url": "https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing"
+      "message": "Échec de vérification : Baisse anormale du nombre de lignes : import suspendu.",
+      "source_url": "https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/gviz/tq?tqx=out:csv"
     },
     {
       "source_id": "cna-gestion",
@@ -29,6 +27,13 @@
       "source_id": "cr-idf",
       "message": "Commune et lieu précis non indiqués dans cette annonce officielle.",
       "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/"
+    },
+    {
+      "event_id": "2027-04-02-noumea-championnat-regional",
+      "name": "Championnat Régional de Nouvelle-Calédonie",
+      "source_id": "ffessm-declarations",
+      "message": "Les dates du commentaire ne correspondent pas à la date de début déclarée.",
+      "source_url": "https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing"
     }
   ]
 }
