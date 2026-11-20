@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T07:07:20.729Z",
+  "generated_at": "2026-11-20T20:08:06.089Z",
   "items": [
     {
       "event_id": "2027-04-02-noumea-championnat-regional",
@@ -22,11 +22,6 @@
       "source_id": "cr-centre",
       "message": "Source modifiée : vérifier les annonces non structurées puis acquitter son empreinte dans data/config.json.",
       "source_url": "https://centreffessm.fr/actualites/apnee/apnee-calendrier-des-competitions-2026-2027/"
-    },
-    {
-      "source_id": "aida-france",
-      "message": "Échec de vérification : HTTP 500",
-      "source_url": "https://aidafrance.fr/actualites/"
     },
     {
       "event_id": "2027-04-25-trophee-canneson",
