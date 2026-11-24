@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T23:49:41.660Z",
+  "generated_at": "2026-11-24T09:48:48.453Z",
   "items": [
     {
       "event_id": "2027-04-02-noumea-championnat-regional",
@@ -7,6 +7,11 @@
       "source_id": "ffessm-declarations",
       "message": "Les dates du commentaire ne correspondent pas à la date de début déclarée.",
       "source_url": "https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing"
+    },
+    {
+      "source_id": "ffessm-national",
+      "message": "Source modifiée : vérifier les annonces non structurées puis acquitter son empreinte dans data/config.json.",
+      "source_url": "https://apnee.ffessm.fr/calendrier-saison-sportive"
     },
     {
       "source_id": "cna-gestion",
