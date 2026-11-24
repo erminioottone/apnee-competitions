@@ -1,6 +1,18 @@
 {
   "updates": [
     {
+      "at": "2026-11-24T22:21:52.783Z",
+      "changes": [
+        {
+          "id": "2027-02-28-saint-raphael-competition-d-apnee-",
+          "name": "Compétition d'apnée de Saint-Raphaël",
+          "kind": "updated",
+          "start": "2027-02-21",
+          "end": null
+        }
+      ]
+    },
+    {
       "at": "2026-11-11T13:55:32.079Z",
       "changes": [
         {

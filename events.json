@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "dataset_version": "2026-11-11T13:55:32.079Z",
-  "as_of": "2026-11-11",
+  "dataset_version": "2026-11-24T22:21:52.783Z",
+  "as_of": "2026-11-24",
   "disclaimer": "Outil indépendant de la FFESSM et d’AIDA France. Vérifiez dates, lieux et inscriptions auprès des organisateurs. Les coordonnées sont approximatives au niveau communal.",
   "events": [
     {
@@ -1812,6 +1812,55 @@
       "revision": 2
     },
     {
+      "id": "2027-02-28-saint-raphael-competition-d-apnee-",
+      "source_key": "ffessm:316a6002167ba5bfbfc0",
+      "federation": "FFESSM",
+      "type": "open",
+      "level": "selective",
+      "name": "Compétition d'apnée de Saint-Raphaël",
+      "start": "2027-02-21",
+      "end": null,
+      "city": "Saint-Raphaël",
+      "department": "83",
+      "country": "FR",
+      "lat": 43.4252,
+      "lon": 6.7684,
+      "commune_code": "83118",
+      "locations": [
+        {
+          "city": "Saint-Raphaël",
+          "department": "83",
+          "commune_code": "83118",
+          "lat": 43.4252,
+          "lon": 6.7684,
+          "verified_on": "2026-11-11",
+          "source_url": "https://geo.api.gouv.fr/communes/83118"
+        }
+      ],
+      "venue": "Stade nautique Alain Chateigner",
+      "organizer": "Estérel Apnée",
+      "info_url": "https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing",
+      "source_id": "ffessm-declarations",
+      "source_url": "https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing",
+      "verified_on": "2026-11-24",
+      "notes": "Lieu : Stade nautique Alain Chateigner (bassin 50 m, profondeur mini 2 m). Épreuves : Statique, Dynamique bi-palmes, Dynamique monopalme, Dynamique sans palmes, 8x50m, 4x50m, 2x50m.",
+      "disciplines": [
+        "STA",
+        "DYNB",
+        "DYN",
+        "DNF",
+        "SPRINT"
+      ],
+      "source_comment": "",
+      "date_status": "confirmed",
+      "date_inference": null,
+      "availability": "listed",
+      "source_fingerprint": "bb94cd06d8d859bc6c0b93985601b6ccb7aa0bb3afc83d78d3cd3c768ca07110",
+      "review_notes": [],
+      "revision": 3,
+      "override_reason": "Homonymie avec Saint-Raphaël en Dordogne : commune du Var identifiée par le code INSEE 83118."
+    },
+    {
       "id": "2027-02-26-noumea-challenge-apnea",
       "source_key": "ffessm:24f4ca916b5c729cefd7",
       "federation": "FFESSM",
@@ -2046,55 +2095,6 @@
       "source_fingerprint": "14b86ffd5a4c932115285d26db9b6f3baef80e8de51089caf732fe0a967ea816",
       "review_notes": [],
       "revision": 2
-    },
-    {
-      "id": "2027-02-28-saint-raphael-competition-d-apnee-",
-      "source_key": "ffessm:316a6002167ba5bfbfc0",
-      "federation": "FFESSM",
-      "type": "open",
-      "level": "selective",
-      "name": "Compétition d'apnée de Saint-Raphaël",
-      "start": "2027-02-28",
-      "end": null,
-      "city": "Saint-Raphaël",
-      "department": "83",
-      "country": "FR",
-      "lat": 43.4252,
-      "lon": 6.7684,
-      "commune_code": "83118",
-      "locations": [
-        {
-          "city": "Saint-Raphaël",
-          "department": "83",
-          "commune_code": "83118",
-          "lat": 43.4252,
-          "lon": 6.7684,
-          "verified_on": "2026-11-11",
-          "source_url": "https://geo.api.gouv.fr/communes/83118"
-        }
-      ],
-      "venue": "Stade nautique Alain Chateigner",
-      "organizer": "Estérel Apnée",
-      "info_url": "https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing",
-      "source_id": "ffessm-declarations",
-      "source_url": "https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing",
-      "verified_on": "2026-11-11",
-      "notes": "Lieu : Stade nautique Alain Chateigner (bassin 50 m, profondeur mini 2 m). Épreuves : Statique, Dynamique bi-palmes, Dynamique monopalme, Dynamique sans palmes, 8x50m, 4x50m, 2x50m.",
-      "disciplines": [
-        "STA",
-        "DYNB",
-        "DYN",
-        "DNF",
-        "SPRINT"
-      ],
-      "source_comment": "",
-      "date_status": "confirmed",
-      "date_inference": null,
-      "availability": "listed",
-      "source_fingerprint": "e33649cf2fb88561e3fb485d27b6e1816a9dbadc6445b1777d5673d93b60f0de",
-      "review_notes": [],
-      "revision": 2,
-      "override_reason": "Homonymie avec Saint-Raphaël en Dordogne : commune du Var identifiée par le code INSEE 83118."
     },
     {
       "id": "2027-03-05-noumea-challenge-d-ete-apne",
