@@ -1,37 +1,19 @@
 {
-  "generated_at": "2026-11-27T08:20:27.725Z",
+  "generated_at": "2026-11-27T10:24:30.507Z",
   "items": [
+    {
+      "event_id": "2027-01-13-joue-les-tours-defi-37-dnf",
+      "name": "DEFI 37 DNF",
+      "source_id": "ffessm-declarations",
+      "message": "Date à confirmer : la déclaration nationale indique le 13 janvier 2027, tandis que l’affiche officielle du Comité Centre indique le 14 janvier 2027. Calendrier régional : https://centreffessm.fr/wp-content/uploads/2026/10/APN-Calendrier-competition-2026-2027.pdf",
+      "source_url": "https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing"
+    },
     {
       "event_id": "2027-04-02-noumea-championnat-regional",
       "name": "Championnat Régional de Nouvelle-Calédonie",
       "source_id": "ffessm-declarations",
       "message": "Les dates du commentaire ne correspondent pas à la date de début déclarée.",
       "source_url": "https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing"
-    },
-    {
-      "source_id": "ffessm-national",
-      "message": "Source modifiée : vérifier les annonces non structurées puis acquitter son empreinte dans data/config.json.",
-      "source_url": "https://apnee.ffessm.fr/calendrier-saison-sportive"
-    },
-    {
-      "source_id": "cna-gestion",
-      "message": "Source modifiée : vérifier les annonces non structurées puis acquitter son empreinte dans data/config.json.",
-      "source_url": "https://g-competitions-cna.fr/"
-    },
-    {
-      "source_id": "cr-idf",
-      "message": "Source modifiée : vérifier les annonces non structurées puis acquitter son empreinte dans data/config.json.",
-      "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/"
-    },
-    {
-      "source_id": "cr-centre",
-      "message": "Source modifiée : vérifier les annonces non structurées puis acquitter son empreinte dans data/config.json.",
-      "source_url": "https://centreffessm.fr/actualites/apnee/apnee-calendrier-des-competitions-2026-2027/"
-    },
-    {
-      "source_id": "aida-france",
-      "message": "Source modifiée : vérifier les annonces non structurées puis acquitter son empreinte dans data/config.json.",
-      "source_url": "https://aidafrance.fr/actualites/"
     },
     {
       "event_id": "2027-04-25-trophee-canneson",

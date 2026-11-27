@@ -58,10 +58,17 @@
       "type": "fédération (officiel)",
       "monitor": true,
       "adapter": "structured_events",
-      "federation": "AIDA"
+      "federation": "AIDA",
+      "text_events": true
     }
   ],
-  "acknowledged_hashes": {},
+  "acknowledged_hashes": {
+    "ffessm-national": "83a2b1acb12b7c209ec31a8418b0c7b733a131667d483a15e3caa70796372d4d",
+    "cna-gestion": "b9d77be123937b818643c33e635f79aa5de2d4b26b59ecce1dac767201e9bb74",
+    "cr-idf": "b43f006f88f8380bed05befc35d73732a96efc5090f0149960b4f365b9f63622",
+    "cr-centre": "5adf90c96559681d3eac5631574285061d45224a1164b02c6be1e83ab3840df0",
+    "aida-france": "ac6d25c934851c4ad29605b58494b65f90cfc45d5f86b4781d6687e90472ba2d"
+  },
   "overrides": {
     "2027-03-28-nice-competition-regional": {
       "reason": "Année 0207 erronée dans la déclaration ; date 2027 déjà vérifiée dans le jeu de données de la saison 2026–2027.",
@@ -83,6 +90,18 @@
       "when": {
         "city": "Saint-Raphaël"
       }
+    },
+    "2027-01-13-joue-les-tours-defi-37-dnf": {
+      "reason": "Divergence entre la déclaration nationale et le calendrier PDF du Comité Centre ; aucune correction de date sans confirmation.",
+      "when": {
+        "raw_date": "13/01/2027"
+      },
+      "fields": {
+        "date_status": "review",
+        "review_notes": [
+          "Date à confirmer : la déclaration nationale indique le 13 janvier 2027, tandis que l’affiche officielle du Comité Centre indique le 14 janvier 2027. Calendrier régional : https://centreffessm.fr/wp-content/uploads/2026/10/APN-Calendrier-competition-2026-2027.pdf"
+        ]
+      }
     }
   },
   "city_aliases": {
@@ -92,5 +111,34 @@
     "Kremlin Bicetre": "Le Kremlin-Bicêtre",
     "LAMENTIN:972": "Le Lamentin"
   },
-  "minimum_source_rows": 10
+  "minimum_source_rows": 10,
+  "source_reviews": {
+    "ffessm-national": {
+      "reviewed_on": "2026-11-27",
+      "hash": "83a2b1acb12b7c209ec31a8418b0c7b733a131667d483a15e3caa70796372d4d",
+      "summary": "Lien de saison 2026-2027 contrôlé : la feuille officielle correspond à la source importée."
+    },
+    "cna-gestion": {
+      "reviewed_on": "2026-11-27",
+      "hash": "b9d77be123937b818643c33e635f79aa5de2d4b26b59ecce1dac767201e9bb74",
+      "summary": "Les huit protocoles publiés pour octobre et novembre 2026 correspondent aux compétitions déjà présentes."
+    },
+    "cr-idf": {
+      "reviewed_on": "2026-11-27",
+      "hash": "b43f006f88f8380bed05befc35d73732a96efc5090f0149960b4f365b9f63622",
+      "summary": "Calendrier 2026-2027 comparé à la feuille nationale ; Massy est confirmé les 23 et 24 janvier. Le lieu du Trophée Canneson reste non publié et signalé séparément."
+    },
+    "cr-centre": {
+      "reviewed_on": "2026-11-27",
+      "hash": "5adf90c96559681d3eac5631574285061d45224a1164b02c6be1e83ab3840df0",
+      "summary": "Affiche PDF 2026-2027 contrôlée visuellement. Les compétitions correspondent au calendrier ; divergence détectée pour Défi 37 DNF (14 janvier sur l’affiche, 13 janvier dans la déclaration), signalée sur la fiche.",
+      "evidence_url": "https://centreffessm.fr/wp-content/uploads/2026/10/APN-Calendrier-competition-2026-2027.pdf"
+    },
+    "aida-france": {
+      "reviewed_on": "2026-11-27",
+      "hash": "ac6d25c934851c4ad29605b58494b65f90cfc45d5f86b4781d6687e90472ba2d",
+      "summary": "Annonce Coupe du NUC 2027 contrôlée : 20 février à Nice ; import du texte de l’annonce activé. Les publications sur les sélections sont exclues des compétitions.",
+      "evidence_url": "https://aidafrance.fr/2026/11/23/coupe-du-nuc-2027/"
+    }
+  }
 }

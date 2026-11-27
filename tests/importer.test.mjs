@@ -11,6 +11,7 @@ import {
   semanticHTML,
   sourceFingerprintHTML,
   pageDateEvidence,
+  extractTextEvent,
 } from "../scripts/lib/importer.mjs";
 test("French explicit multi-day ranges and durations", () => {
   for (const [start, text, end] of [
@@ -88,6 +89,29 @@ test("Registration deadlines cannot extend an event", () => {
     ).end,
     "2027-04-04",
   );
+});
+test("Unrelated training dates cannot extend a competition", () => {
+  for (const text of [
+    "Compétition les 3 et 4 avril 2027. Entraînement au club le 20 avril 2027.",
+    "Compétition les 3 et 4 avril 2027, entraînement au club le 20 avril 2027.",
+    "Compétition les 3 et 4 avril 2027. Entraînement les 20 et 21 avril 2027.",
+    "Compétition du 03/04/2027 au 04/04/2027. Assemblée le 20/04/2027.",
+  ]) assert.equal(inferEndDate("2027-04-03", text).end, "2027-04-04", text);
+  assert.ok(inferEndDate("2027-04-03", "Du 3 au 4 avril 2027 ou du 3 au 5 avril 2027").review);
+  assert.ok(inferEndDate("2027-04-30", "Du 30 au 31 avril 2027").review);
+});
+test("Text announcements use the event year, never the publication date", () => {
+  const places = [{ city: "Nice", commune_code: "06088", department: "06" }];
+  const html = '<h1>Coupe du NUC 2027</h1><main><time>23 novembre 2026</time><div>Nice accueille une compétition AIDA indoor le 20 février.</div><div>Inscription avant le 10 février 2027.</div></main><footer>Paris, le 12 mars 2027</footer>';
+  const parsed = extractTextEvent(html, "https://example.com/nuc", places);
+  assert.equal(parsed.event.startDate, "2027-02-20");
+  assert.equal(parsed.event.location.address.addressLocality, "Nice");
+  assert.ok(!parsed.event.__text_evidence.includes("Inscription"));
+  assert.equal(extractTextEvent(html.replace("NUC 2027", "NUC"), "https://example.com/nuc", places).event, null);
+  assert.equal(extractTextEvent(html.replace("20 février", "31 février"), "https://example.com/nuc", places).event, null);
+  assert.equal(extractTextEvent(html, "https://example.com/nuc", []).event, null);
+  assert.ok(extractTextEvent(html.replace("Nice accueille", "Nice et Paris accueillent"), "https://example.com/nuc", [...places, { city: "Paris", commune_code: "75056" }]).issue);
+  assert.equal(extractTextEvent(html.replace("Coupe du NUC 2027", "Modalités de sélection Indoor 2027"), "https://example.com/nuc", places).issue, null);
 });
 test("Regional pages supply missing end dates only for the matching city", () => {
   const html =

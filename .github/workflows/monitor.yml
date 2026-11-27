@@ -5,7 +5,9 @@ on:
     branches: [main]
     paths:
       - "scripts/**"
+      - "lib/**"
       - "data/config.json"
+      - "data/manual-events.json"
       - ".github/workflows/monitor.yml"
   schedule:
     # Every six hours, away from the busiest minute. Scheduled runs are best-effort.
@@ -65,3 +67,7 @@ jobs:
           console.log(`Events: ${s.import?.event_count ?? 'unknown'}; changes: ${s.import?.changes ?? 'unknown'}; reviews: ${s.import?.review_count ?? 'unknown'}`);
           for(const [id,e] of Object.entries(s.sources||{}))console.log(`- ${id}: ${e.error ? 'FAILED — '+e.error : e.needs_review ? 'Review pending' : 'OK'}`);
           JS
+      # Run after saving and publishing the status, so failures stay visible
+      # on the site while GitHub also reports a failed refresh.
+      - name: Report source failures
+        run: node scripts/check-health.mjs
