@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T10:28:53.659Z",
+  "generated_at": "2026-11-27T21:11:31.412Z",
   "items": [
     {
       "event_id": "2027-01-13-joue-les-tours-defi-37-dnf",
@@ -14,6 +14,11 @@
       "source_id": "ffessm-declarations",
       "message": "Les dates du commentaire ne correspondent pas à la date de début déclarée.",
       "source_url": "https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing"
+    },
+    {
+      "source_id": "cr-idf",
+      "message": "Source modifiée : vérifier les annonces non structurées puis acquitter son empreinte dans data/config.json.",
+      "source_url": "https://ffessm-idf.fr/liste-des-commissions/apnee/"
     },
     {
       "event_id": "2027-04-25-trophee-canneson",
