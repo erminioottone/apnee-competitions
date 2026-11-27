@@ -9,6 +9,7 @@ import {
   monitoringHealth,
   calendarICS,
   safeUrl,
+  emptyResultsMessage,
 } from "../lib/model.mjs";
 const event = {
   id: "test",
@@ -91,6 +92,15 @@ test("HTTP errors, stale checks and pending reviews never look healthy", () => {
     monitoringHealth(m, new Date("2026-11-14T00:00:00Z")).stale,
     true,
   );
+  assert.deepEqual(monitoringHealth(m, new Date("2026-11-11T07:00:00Z"), ["missing"]).failed, ["failed", "missing"]);
+  assert.equal(monitoringHealth({ ...m, import: { error: "Invalid CSV" } }).importFailed, true);
+});
+test("Empty-state suggestions match the active scope and AIDA coverage", () => {
+  const france = emptyResultsMessage({ scope: "france", fed: "AIDA", showPast: false });
+  assert.match(france, /couverture AIDA reste partielle/);
+  assert.doesNotMatch(france, /choisissez|rayon/);
+  assert.match(emptyResultsMessage({ scope: "distance", query: "Nice" }), /Élargissez le rayon/);
+  assert.match(emptyResultsMessage({ scope: "france", query: "Nice" }), /Effacez la recherche/);
 });
 test("Calendar uses exclusive end dates, stable UIDs and escaped UTF-8 lines", () => {
   const s = calendarICS(

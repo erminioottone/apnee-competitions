@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "dataset_version": "2026-11-24T22:21:52.783Z",
-  "as_of": "2026-11-24",
+  "dataset_version": "2026-11-27T10:24:30.507Z",
+  "as_of": "2026-11-27",
   "disclaimer": "Outil indépendant de la FFESSM et d’AIDA France. Vérifiez dates, lieux et inscriptions auprès des organisateurs. Les coordonnées sont approximatives au niveau communal.",
   "events": [
     {
@@ -944,18 +944,21 @@
       "info_url": "https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing",
       "source_id": "ffessm-declarations",
       "source_url": "https://docs.google.com/spreadsheets/d/11O77uwZXXG3LFnSzM2BgtK-T0_j5NZCqz32tx2voKFI/edit?usp=sharing",
-      "verified_on": "2026-11-11",
+      "verified_on": "2026-11-27",
       "notes": "Lieu : Bulle d'O (bassin 25 m, profondeur mini 1,2 m). Épreuves : Dynamique sans palmes. Accueil inclusif déclaré par l’organisateur.",
       "disciplines": [
         "DNF"
       ],
       "source_comment": "",
-      "date_status": "confirmed",
+      "date_status": "review",
       "date_inference": null,
       "availability": "listed",
       "source_fingerprint": "7cfd6e4cbb59e070774009b1dc7297b0469323be4fbdeac6001e7206d5ac96da",
-      "review_notes": [],
-      "revision": 2
+      "review_notes": [
+        "Date à confirmer : la déclaration nationale indique le 13 janvier 2027, tandis que l’affiche officielle du Comité Centre indique le 14 janvier 2027. Calendrier régional : https://centreffessm.fr/wp-content/uploads/2026/10/APN-Calendrier-competition-2026-2027.pdf"
+      ],
+      "revision": 3,
+      "override_reason": "Divergence entre la déclaration nationale et le calendrier PDF du Comité Centre ; aucune correction de date sans confirmation."
     },
     {
       "id": "2027-01-17-fontenay-sous-bois-apnee-fontenay-chall",
@@ -1763,6 +1766,47 @@
       "source_fingerprint": "b8afa0a284d74728f4df8fd5ce56f0919a6b6abc025afa93f234bd3824b94239",
       "review_notes": [],
       "revision": 2
+    },
+    {
+      "id": "aida-france-670ebe9da92f4a8d84bd",
+      "name": "Coupe du NUC 2027",
+      "federation": "AIDA",
+      "type": "open",
+      "level": "unknown",
+      "start": "2027-02-20",
+      "end": null,
+      "city": "Nice",
+      "department": "06",
+      "country": "FR",
+      "lat": 43.696,
+      "lon": 7.2714,
+      "commune_code": "06088",
+      "locations": [
+        {
+          "city": "Nice",
+          "department": "06",
+          "commune_code": "06088",
+          "lat": 43.696,
+          "lon": 7.2714,
+          "verified_on": "2026-11-11",
+          "source_url": "https://geo.api.gouv.fr/communes/06088"
+        }
+      ],
+      "venue": null,
+      "info_url": "https://aidafrance.fr/2026/11/23/coupe-du-nuc-2027/",
+      "source_id": "aida-france",
+      "source_url": "https://aidafrance.fr/2026/11/23/coupe-du-nuc-2027/",
+      "organizer": "",
+      "verified_on": "2026-11-27",
+      "notes": "Date et commune publiées dans l’annonce officielle. Consultez l’organisateur pour les épreuves et les inscriptions.",
+      "date_status": "confirmed",
+      "date_inference": "source_text_event",
+      "date_evidence": "C'est reparti, Nice et le NUC Subaquatique t'accueillent, le 20 février , à la piscine universitaire pour une compétition AIDA indoor. De 8h à 16h à peu près.",
+      "availability": "listed",
+      "cancelled": false,
+      "revision": 0,
+      "review_notes": [],
+      "disciplines": []
     },
     {
       "id": "2027-02-21-chateaubriant-competition-regional",
@@ -3403,7 +3447,8 @@
       "type": "fédération (officiel)",
       "monitor": true,
       "adapter": "structured_events",
-      "federation": "AIDA"
+      "federation": "AIDA",
+      "text_events": true
     }
   ]
 }

@@ -18,6 +18,7 @@ import {
   sourceFingerprintHTML,
   decodeHTML,
   extractStructuredEvents,
+  extractTextEvent,
   pageDateEvidence,
 } from "./lib/importer.mjs";
 const root = path.resolve(new URL("..", import.meta.url).pathname);
@@ -216,6 +217,7 @@ export async function importDeclarations(
           : null,
       start = override?.fields?.start || r.start,
       inference = inferEndDate(start, r.comment),
+      singleDay = /(?:uneseule|1seule|unseul|1seul)jour/.test(normalize(r.comment)),
       review = [];
     if (r.raw_date && !r.start && !override?.fields?.start)
       review.push(`Date source invalide : ${r.raw_date}.`);
@@ -260,7 +262,7 @@ export async function importDeclarations(
       prior.start === start &&
       prior.date_inference &&
       r.comment !== prior.source_comment &&
-      !/une seule|1 seule/.test(r.comment)
+      !singleDay
     ) {
       e.end = prior.end;
       e.date_status = "review";
@@ -272,7 +274,8 @@ export async function importDeclarations(
       prior?.end &&
       !e.end &&
       prior.start === start &&
-      prior.date_inference === "source_page_range"
+      prior.date_inference === "source_page_range" &&
+      !singleDay
     ) {
       e.end = prior.end;
       e.date_inference = prior.date_inference;
@@ -390,6 +393,7 @@ async function structuredImport(
 ) {
   const candidates = extractStructuredEvents(html),
     events = [],
+    retainedReviews = [],
     issues = [];
   const articleHTML =
     [...html.matchAll(/<article\b[^>]*>[\s\S]*?<\/article>/gi)]
@@ -414,7 +418,17 @@ async function structuredImport(
   for (const url of [...new Set(links.map((x) => x.url))].slice(0, 6))
     try {
       const { text } = await fetchText(url, fetcher);
-      candidates.push(...extractStructuredEvents(text));
+      const structured = extractStructuredEvents(text);
+      candidates.push(...structured);
+      if (!structured.length && source.text_events) {
+        const parsed = extractTextEvent(text, url, Object.values(cache));
+        if (parsed.event) candidates.push(parsed.event);
+        if (parsed.issue) {
+          const prior = previous.find((e) => e.source_id === source.id && e.info_url === url);
+          if (prior) retainedReviews.push({ ...prior, date_status: "review", review_notes: [parsed.issue] });
+          issues.push({ ...(prior ? { event_id: prior.id, name: prior.name } : {}), source_id: source.id, message: parsed.issue, source_url: url });
+        }
+      }
     } catch (e) {
       issues.push({
         source_id: source.id,
@@ -460,12 +474,15 @@ async function structuredImport(
       venue: e.location?.name || null,
       info_url: url,
       source_id: source.id,
-      source_url: source.url,
+      source_url: url,
       organizer: typeof e.organizer?.name === "string" ? e.organizer.name : "",
       verified_on: prior?.verified_on || now.slice(0, 10),
-      notes: "Dates structurées publiées par la source officielle.",
+      notes: e.__text_evidence
+        ? "Date et commune publiées dans l’annonce officielle. Consultez l’organisateur pour les épreuves et les inscriptions."
+        : "Dates structurées publiées par la source officielle.",
       date_status: "confirmed",
-      date_inference: "structured_event",
+      date_inference: e.__text_evidence ? "source_text_event" : "structured_event",
+      ...(e.__text_evidence ? { date_evidence: e.__text_evidence } : {}),
       availability: "listed",
       cancelled: /EventCancelled$/.test(e.eventStatus || ""),
       revision: prior?.revision || 0,
@@ -474,7 +491,7 @@ async function structuredImport(
     };
     if (city)
       try {
-        const l = await locate(city, null, config, cache, fetcher, now);
+        const l = await locate(city, e.__commune?.department || null, config, cache, fetcher, now);
         Object.assign(event, {
           lat: l.lat,
           lon: l.lon,
@@ -503,7 +520,7 @@ async function structuredImport(
     events.push(event);
   }
   return {
-    events: [...new Map(events.map((e) => [e.id, e])).values()],
+    events: [...new Map([...retainedReviews, ...events].map((e) => [e.id, e])).values()],
     issues,
   };
 }
@@ -693,7 +710,15 @@ export async function updateData({
           source_url: s.url,
         })),
       );
-    if (!evidence.length) continue;
+    if (!evidence.length) {
+      if (e.date_inference === "source_page_range" && e.date_sources?.some((s) => responses.get(s.source_id)?.text && !responses.get(s.source_id)?.error)) {
+        const message = "La plage de dates n’est plus présente dans la source régionale ; dernière date connue conservée en attente de confirmation.";
+        e.date_status = "review";
+        e.review_notes = [...new Set([...e.review_notes, message])];
+        issues.push({ event_id: e.id, name: e.name, source_id: e.source_id, message, source_url: e.date_sources[0].source_url });
+      }
+      continue;
+    }
     const ends = [...new Set(evidence.map((x) => x.end))];
     if (
       ends.length > 1 ||

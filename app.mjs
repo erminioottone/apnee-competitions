@@ -8,6 +8,7 @@ import {
   monitoringHealth,
   calendarICS,
   validateDataset,
+  emptyResultsMessage,
 } from "./lib/model.mjs";
 const $ = (id) => document.getElementById(id);
 const esc = (s) =>
@@ -159,7 +160,7 @@ function card({ ev: e, d }) {
   return `<article class="card${isPast(e) ? " past" : ""}${review.length ? " review" : ""}${e.cancelled ? " cancelled" : ""}"><div class="card-top"><h3>${esc(e.name)}</h3><span class="distance">${d === null ? "Lieu non localisé" : "≈ " + Math.round(d) + " km"}</span></div><div class="badges"><span class="badge fed-${esc(e.federation)}">${esc(e.federation)}</span><span class="badge">${esc(TYPE_LABELS[e.type])}</span>${e.level === "selective" ? '<span class="badge">Sélective</span>' : ""}${e.level === "free" ? '<span class="badge">Format libre</span>' : ""}${e.reference_only ? '<span class="badge">Référence internationale</span>' : ""}${e.cancelled ? '<span class="badge">Annulée</span>' : ""}${e.availability === "missing" ? '<span class="badge">Absente de la dernière source</span>' : ""}${isPast(e) ? '<span class="badge">Passée</span>' : ""}</div><p class="when">${esc(range)}${e.date_status === "review" ? " · <strong>Dates à vérifier</strong>" : ""}</p><div class="where">${esc(where)}${e.locations?.length > 1 ? " · Plusieurs communes" : ""}${d !== null ? " · Distance à vol d’oiseau" : ""}</div><div class="actions"><a href="${esc(safeUrl(e.info_url) || "#")}" target="_blank" rel="noopener noreferrer">Organisateur / inscription</a><a href="${esc(safeUrl(e.source_url) || "#")}" target="_blank" rel="noopener noreferrer">Source officielle</a>${e.city ? `<a href="${esc(itinerary)}" target="_blank" rel="noopener noreferrer">Itinéraire</a>` : ""}${e.start ? `<button type="button" data-calendar="${esc(e.id)}">Ajouter au calendrier</button>` : ""}</div>${e.notes ? `<p class="reg-note">${esc(e.notes)}</p>` : ""}${e.date_inference?.startsWith("source_comment") ? '<p class="source-note">Durée déduite automatiquement des dates ou de la durée indiquées par l’organisateur.</p>' : ""}${review.map((n) => `<p class="note">${esc(n)}</p>`).join("")}<div class="source-note">Vérifié / importé le ${esc(formatDate(e.verified_on))}. Inscriptions à confirmer auprès de l’organisateur.</div></article>`;
 }
 function renderMonitoring() {
-  const h = monitoringHealth(state.monitoring);
+  const h = monitoringHealth(state.monitoring, new Date(), state.data?.sources.filter((s) => s.monitor).map((s) => s.id) || []);
   const labels = (ids) =>
     ids
       .map((id) => state.data?.sources.find((s) => s.id === id)?.name || id)
@@ -177,6 +178,8 @@ function renderMonitoring() {
         labels(h.pending) +
         ".",
     );
+  if (state.monitoring?.import?.review_count && !h.pending.length)
+    messages.push(`${state.monitoring.import.review_count} vérification(s) de dates ou de lieux en attente. Consultez « Vérifications en attente ».`);
   if (state.monitoring?.import?.error)
     messages.push(
       "Import suspendu : les dernières données valides ont été conservées.",
@@ -210,7 +213,7 @@ function render() {
   state.results = filterEvents(state.data.events, state);
   const unlocated = state.results.filter((x) => x.d === null).length;
   $("metaLine").textContent =
-    `${state.scope === "distance" ? state.results.length - unlocated : state.results.length} compétition(s)${state.scope === "distance" ? ` dans un rayon de ${state.radius} km autour de ${state.home.label}` : state.scope === "france" ? " en France et outre-mer" : " — tous les lieux"}${unlocated ? ` · ${unlocated} lieu(x) à confirmer, hors filtre de distance` : ""} · Données mises à jour le ${formatDate(state.data.as_of)}`;
+    `${state.scope === "distance" ? state.results.length - unlocated : state.results.length} compétition(s)${state.scope === "distance" ? ` dans un rayon de ${state.radius} km autour de ${state.home.label}` : state.scope === "france" ? " en France et outre-mer" : " — tous les lieux"}${unlocated ? ` · ${unlocated} lieu(x) à confirmer${state.scope === "distance" ? ", hors filtre de distance" : ""}` : ""} · Dernière modification des événements : ${formatDate(state.data.as_of)}`;
   const located = state.results.filter((x) => x.d !== null),
     unknown = state.results.filter((x) => x.d === null);
   const cards =
@@ -226,7 +229,7 @@ function render() {
       : state.results.map(card).join("");
   $("results").innerHTML = state.results.length
     ? cards
-    : '<p class="empty">Aucune compétition ne correspond à ces filtres. Essayez « Toute la France et outre-mer » ou élargissez le rayon.</p>';
+    : `<p class="empty">${esc(emptyResultsMessage(state))}</p>`;
   $("exportCalendar").disabled = !state.results.some((x) => x.ev.start);
 }
 function download(events, name) {
@@ -486,7 +489,7 @@ getJSON("review-queue.json")
       ? state.queue
           .map(
             (i) =>
-              `<li>${i.name ? `<strong>${esc(i.name)}</strong> : ` : ""}${esc(i.event_id ? i.message : "Source officielle à vérifier.")}${i.source_url ? ` <a href="${esc(safeUrl(i.source_url) || "#")}" target="_blank" rel="noopener noreferrer">Consulter la source</a>` : ""}</li>`,
+              `<li>${i.name ? `<strong>${esc(i.name)}</strong> : ` : `<strong>${esc(state.data?.sources.find((s) => s.id === i.source_id)?.name || i.source_id)}</strong> : `}${esc(i.event_id || i.message.includes(" : ") || i.message.startsWith("Annonce inaccessible") || i.message.startsWith("Échec") ? i.message : "Annonce modifiée : vérification nécessaire.")}${i.source_url ? ` <a href="${esc(safeUrl(i.source_url) || "#")}" target="_blank" rel="noopener noreferrer">Consulter la source</a>` : ""}</li>`,
           )
           .join("")
       : "<li>Aucune anomalie détectée lors du dernier import.</li>";

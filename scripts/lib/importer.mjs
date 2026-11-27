@@ -57,6 +57,30 @@ const MONTHS = [
 const monthRE = MONTHS.join("|");
 const makeDate = (year, month, day) =>
   `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+const plainFrench = (text) => String(text).normalize("NFD")
+  .replace(/[\u0300-\u036f]/g, "").toLowerCase();
+const weekdayRE = "lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche";
+function explicitDateRanges(text, year) {
+  const ranges = [];
+  const add = (y1, m1, d1, y2, m2, d2) => {
+    const first = makeDate(y1, m1, d1);
+    const last = makeDate(y2 || (Number(m2) < Number(m1) ? Number(y1) + 1 : y1), m2, d2);
+    ranges.push([first, last]);
+  };
+  for (const m of text.matchAll(new RegExp(`\\b(\\d{1,2})(?:er)?\\s*(?:-|–|au|et|&)\\s*(\\d{1,2})(?:er)?\\s+(${monthRE})(?:\\s+(20\\d{2}))?\\b`, "g"))) {
+    const month = MONTHS.indexOf(m[3]) + 1;
+    add(m[4] || year, month, m[1], m[4] || year, month, m[2]);
+  }
+  for (const m of text.matchAll(new RegExp(`\\b(\\d{1,2})(?:er)?\\s+(${monthRE})(?:\\s+(20\\d{2}))?(?:\\s+\\d{1,2}\\s*h(?:\\s*\\d{1,2})?)?\\s*(?:au|et|&|[-–])\\s*(?:(?:${weekdayRE})\\s+)?(\\d{1,2})(?:er)?\\s+(${monthRE})(?:\\s+(20\\d{2}))?`, "g")))
+    add(m[3] || year, MONTHS.indexOf(m[2]) + 1, m[1], m[6], MONTHS.indexOf(m[5]) + 1, m[4]);
+  for (const m of text.matchAll(new RegExp(`\\b(?:${weekdayRE})\\s+(\\d{1,2})(?:er)?\\b[^.!?;\\n\\d]{0,40}?\\bet\\s+(?:${weekdayRE})\\s+(\\d{1,2})(?:er)?\\b[^.!?;\\n\\d]{0,60}?\\b(${monthRE})(?:\\s+(20\\d{2}))?`, "g"))) {
+    const month = MONTHS.indexOf(m[3]) + 1;
+    add(m[4] || year, month, m[1], m[4] || year, month, m[2]);
+  }
+  for (const m of text.matchAll(/\b(\d{1,2})\/(\d{1,2})(?:\/(20\d{2}))?\s*(?:au|et|&|[-–])\s*(\d{1,2})\/(\d{1,2})(?:\/(20\d{2}))?\b/g))
+    add(m[3] || year, m[2], m[1], m[6], m[5], m[4]);
+  return [...new Map(ranges.map((r) => [r.join("/"), r])).values()];
+}
 export function inferEndDate(start, comment = "") {
   if (!validDate(start))
     return {
@@ -64,10 +88,7 @@ export function inferEndDate(start, comment = "") {
       method: null,
       review: comment ? "Date de début à confirmer." : null,
     };
-  const text = String(comment)
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase()
+  const text = plainFrench(comment)
     .replace(
       /\b(?:inscriptions?|date\s+limite|candidatures?|deadline|avant\s+le)\b[^.!?;\n]*/g,
       " ",
@@ -77,65 +98,22 @@ export function inferEndDate(start, comment = "") {
     /(?:une seule|1 seule|un seul|1 seul) journee?/.test(text)
   )
     return { end: null, method: null, review: null };
-  const year = Number(start.slice(0, 4)),
-    month = Number(start.slice(5, 7));
-  const dates = [];
-  for (const m of text.matchAll(
-    new RegExp(
-      `\\b(\\d{1,2})(?:er)?\\s*(?:-|–|au|et|&)\\s*(\\d{1,2})(?:er)?\\s+(${monthRE})(?:\\s+(20\\d{2}))?`,
-      "g",
-    ),
-  )) {
-    const mo = MONTHS.indexOf(m[3]) + 1,
-      y = Number(m[4] || year);
-    dates.push(makeDate(y, mo, m[1]), makeDate(y, mo, m[2]));
-  }
-  for (const m of text.matchAll(
-    new RegExp(`\\b(\\d{1,2})(?:er)?\\s+(${monthRE})(?:\\s+(20\\d{2}))?`, "g"),
-  ))
-    dates.push(makeDate(Number(m[3] || year), MONTHS.indexOf(m[2]) + 1, m[1]));
-  for (const m of text.matchAll(/\b(\d{1,2})\/(\d{1,2})(?:\/(20\d{2}))?\b/g))
-    dates.push(makeDate(Number(m[3] || year), m[2], m[1]));
-  const mentionedMonths = [
-    ...new Set(
-      [...text.matchAll(new RegExp(`\\b(${monthRE})\\b`, "g"))].map(
-        (m) => MONTHS.indexOf(m[1]) + 1,
-      ),
-    ),
-  ];
-  for (const m of text.matchAll(
-    /\b(?:lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)\s+(\d{1,2})(?:er)?\b/g,
-  ))
-    dates.push(
-      makeDate(
-        year,
-        mentionedMonths.length === 1 ? mentionedMonths[0] : month,
-        m[1],
-      ),
-    );
-  // A range spanning New Year may omit the second year.
-  const adjusted = dates.map((d) =>
-    d < start && start.slice(5, 7) === "12" && d.slice(5, 7) === "01"
-      ? `${year + 1}${d.slice(4)}`
-      : d,
-  );
-  const unique = [...new Set(adjusted)].filter(validDate).sort();
-  const close = unique.filter((d) => d >= start && d <= addDays(start, 31));
-  const hasRange =
-    /(?:sur\s+(?:\d+|deux|trois)\s+jours|\bau\b|\bet\b|&|\d\s*[-–]\s*\d)/.test(
-      text,
-    );
-  if (hasRange && close.includes(start) && close.length > 1)
-    return { end: close.at(-1), method: "source_comment_range", review: null };
+  // Match connected date ranges. Collecting every date in a comment can turn
+  // an unrelated training date into the end of a competition.
+  const ranges = explicitDateRanges(text, Number(start.slice(0, 4)));
+  const matching = ranges.filter(([first, last]) => first === start && validDate(last) && last > start && last <= addDays(start, 31));
+  const ends = [...new Set(matching.map(([, last]) => last))];
+  if (ends.length === 1)
+    return { end: ends[0], method: "source_comment_range", review: null };
   const duration = text.match(
     /\b(?:sur|pendant)\s+(\d{1,2}|deux|trois)\s+jours\b/,
   );
-  if (hasRange && unique.length && !close.includes(start))
+  if (ranges.length)
     return {
       end: null,
       method: null,
       review:
-        "Les dates du commentaire ne correspondent pas à la date de début déclarée.",
+        ends.length > 1 ? "Plusieurs dates de fin sont indiquées ; confirmation nécessaire." : "Les dates du commentaire ne correspondent pas à la date de début déclarée.",
     };
   if (duration) {
     const days = { deux: 2, trois: 3 }[duration[1]] || Number(duration[1]);
@@ -327,6 +305,50 @@ export function extractStructuredEvents(html) {
   return out;
 }
 
+// Text-only announcements are imported only when their event title, year,
+// competition date and a previously verified French commune are unambiguous.
+// Article publication dates and arbitrary page/footer dates are never inputs.
+export function extractTextEvent(html, url, places = []) {
+  const name = semanticHTML(html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || "");
+  if (!/coupe|competition|championnat|contest|challenge|trophee/.test(normalize(name)) ||
+      /selection|modalites|resultats|bilan|calendrier/.test(normalize(name)))
+    return { event: null, issue: null };
+  const body = html.match(/<(?:main|article)\b[^>]*>([\s\S]*?)<\/(?:main|article)>/i)?.[1];
+  const issue = (message) => ({ event: null, issue: `${name} : ${message}` });
+  if (!body) return issue("contenu de l’annonce à vérifier.");
+  const blocks = body.replace(/<time\b[^>]*>[\s\S]*?<\/time>/gi, " ")
+    .split(/<\/?(?:p|div|section|h[1-6])\b[^>]*>/gi)
+    .map(semanticHTML).filter((s) => /competition|coupe|championnat|accueill|aura lieu|se deroul|rendez.vous/.test(plainFrench(s)));
+  const text = plainFrench(blocks.join("\n")).replace(/\b(?:inscriptions?|date\s+limite|candidatures?|deadline|avant\s+le)\b[^.!?;\n]*/g, " ");
+  const titleYears = [...new Set(name.match(/\b20\d{2}\b/g) || [])];
+  const dates = [];
+  for (const m of text.matchAll(new RegExp(`\\b(\\d{1,2})(?:er)?\\s+(${monthRE})(?:\\s+(20\\d{2}))?\\b`, "g"))) {
+    const year = m[3] || (titleYears.length === 1 ? titleYears[0] : null);
+    if (!year) return issue("année de compétition non précisée.");
+    dates.push(makeDate(year, MONTHS.indexOf(m[2]) + 1, m[1]));
+  }
+  const ranges = explicitDateRanges(text, Number(titleYears[0]));
+  const unique = [...new Set([...dates, ...ranges.flat()])].sort();
+  if (!unique.length || unique.some((d) => !validDate(d)))
+    return issue("date de compétition non exploitable ; confirmation nécessaire.");
+  const start = unique[0], inferred = inferEndDate(start, text);
+  if (inferred.review || (unique.length > 1 && (!inferred.end || unique.some((d) => d > inferred.end))))
+    return issue("plusieurs dates possibles ; confirmation nécessaire.");
+  const content = plainFrench(semanticHTML(body));
+  const cities = [...new Map(places.filter((p) => p.city && p.commune_code && plainFrench(p.city).length >= 4)
+    .filter((p) => {
+      const needle = plainFrench(p.city).replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/[- ]/g, "[- ]");
+      return new RegExp(`(?:^|[^a-z])${needle}(?=$|[^a-z])`).test(content);
+    }).map((p) => [p.commune_code, p])).values()];
+  if (cities.length !== 1) return issue("commune absente ou ambiguë ; confirmation nécessaire.");
+  const city = cities[0];
+  return { issue: null, event: {
+    "@type": "SportsEvent", name, startDate: start, endDate: inferred.end || start, url,
+    location: { address: { addressCountry: "FR", addressLocality: city.city }, name: null },
+    __text_evidence: blocks.join(" "), __commune: city,
+  } };
+}
+
 export function pageDateEvidence(event, html) {
   if (!event.start || !event.city) return [];
   const chunks = html
@@ -337,7 +359,7 @@ export function pageDateEvidence(event, html) {
       (t) =>
         t.length < 600 &&
         normalize(t).includes(normalize(event.city)) &&
-        !/formation|stageinitial|plongeesportive/.test(normalize(t)),
+        !/formation|stageinitial|plongeesportive|entrainement/.test(normalize(t)),
     )
     .flatMap((text) => {
       const inferred = inferEndDate(event.start, text);

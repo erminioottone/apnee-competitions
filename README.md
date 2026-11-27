@@ -24,9 +24,9 @@ Le système n’invente pas de durée en cas de conflit. Par exemple, une compé
 
 ## Couverture AIDA et limites
 
-La feuille FFESSM est importée automatiquement. Les pages AIDA France et les annonces qu’elles référencent sont surveillées ; les événements français au format JSON-LD Event/SportsEvent sont importés lorsqu’ils sont disponibles. La date de publication d’un article n’est jamais prise pour la date d’une compétition.
+La feuille FFESSM est importée automatiquement. Les pages AIDA France et les annonces qu’elles référencent sont surveillées ; les événements français au format JSON-LD Event/SportsEvent sont importés lorsqu’ils sont disponibles. Les annonces en texte sont également importées si le titre de compétition, l’année, la date et une commune française déjà vérifiée sont sans ambiguïté. L’année doit apparaître dans le titre de l’événement ou dans sa date, jamais seulement dans l’URL ou la date de publication. Les cas incomplets sont ajoutés aux vérifications ; un événement déjà connu reste affiché avec un avertissement si sa nouvelle annonce devient ambiguë.
 
-Les annonces uniquement en texte libre, image ou PDF ne permettent pas une importation complète garantie. Leurs modifications restent signalées jusqu’à vérification. Le calendrier AIDA France consulté lors de cette version ne fournit pas de flux structuré à jour. Les références internationales historiques restent dans `data/manual-events.json` et sont exclues du flux France.
+Les annonces uniquement en image, PDF ou texte ambigu ne permettent pas une importation complète garantie. Leurs modifications restent signalées jusqu’à vérification. La couverture AIDA reste partielle. Les références internationales historiques restent dans `data/manual-events.json` et sont exclues du flux France.
 
 Les coordonnées sont communales, pas systématiquement celles de la piscine. La présence de plusieurs communes est prise en compte par la distance minimale. Les itinéraires permettent de préparer le trajet réel.
 
@@ -61,6 +61,8 @@ Les corrections pérennes vont dans `data/config.json`, sous `overrides`, par id
 
 Pour acquitter une page non structurée après contrôle, copier son `hash` de `sources-status.json` dans `acknowledged_hashes[source_id]`. Une alerte demeure tant que la page n’est pas acquittée ; une simple journée sans changement ne l’efface pas. Les échecs HTTP et les vérifications datant de plus de 48 heures sont signalés séparément.
 
+Les contrôles documentés sont enregistrés dans `source_reviews` avec leur date, empreinte et conclusion. Les sources contrôlées le 27 novembre 2026 ont permis d’ajouter la Coupe du NUC (20 février 2027, Nice). Trois incertitudes restent visibles : la date de Défi 37 DNF (13 janvier dans la déclaration nationale contre 14 janvier sur l’affiche Centre), le commentaire contradictoire de Nouvelle-Calédonie et le lieu du Trophée Canneson. Un acquittement de page ne supprime pas les alertes propres aux événements.
+
 Les identifiants source restent stables lors des changements de date. Une correction d’une compétition existante conserve son UID iCalendar pour mettre à jour les abonnements.
 
 ## Développement et validation
@@ -75,5 +77,7 @@ npm run dev
 Aucune installation npm n’est requise. Les tests couvrent les homonymies, les plages de dates françaises, les conflits, les échéances d’inscription, les CSV multilignes, les erreurs réseau, les avertissements persistants, l’idempotence des imports, les filtres et les fichiers iCalendar.
 
 Le workflow **Validate calendar and application** vérifie les changements sur les pull requests et sur `main`. Le workflow de mise à jour exécute également les tests avant chaque import.
+
+Après enregistrement et publication du statut, `node scripts/check-health.mjs` fait échouer le workflow si une source attendue est absente, inaccessible ou invalide, si l’import principal a échoué ou si les vérifications sont anciennes. Les dernières données valides restent publiées. Les vérifications manuelles en attente produisent des avertissements GitHub. Les corrections manuelles et les modifications de `lib/` déclenchent aussi un rafraîchissement.
 
 Le déploiement conserve GitHub Pages sur `main`, dossier racine. Le workflow requiert `contents: write` pour les fichiers générés et `pages: write` pour demander leur publication. Les modifications applicatives sont publiées par le mécanisme GitHub Pages habituel.
